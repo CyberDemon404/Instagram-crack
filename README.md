@@ -74,4 +74,4 @@ $ python2 Prem.py
 
 #(Telegram)#
 
-https://t.me/Rozhak.xd
+https://t.me/rozhakxd
