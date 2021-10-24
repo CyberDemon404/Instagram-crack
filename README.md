@@ -64,8 +64,6 @@ Perintah :
 
     $ pip2 install requests
 
-    $ pip2 install mechanize
-
     $ git clone https://github.com/RozhakXD/Premium
 
     $ cd Premium
