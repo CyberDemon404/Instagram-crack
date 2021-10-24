@@ -2,76 +2,74 @@
 
 Script Crack Facebook & Instagram Pastinya Free 😎
 
-#(Menu_Login)#
+Menu Login :
 
     • Login Menggunakan Cookie
 
     • Cara Mendapatkan Cookie
 
-#(Menu)#
+Menu Crack :
 
 • Crack Instagram
 
-    • Crack From Username
+    • Crack From 
 
-    • Crack From Query V1
+    • Crack From 
 
-    • Crack From Query V2
+    • Crack From 
 
-    • Crack From Email
+    • Crack From 
 
-    • Crack From Nomor
+    • Crack From 
 
-• Dump ID Teman
+• Crack Facebook
 
-• Dump ID Publik
+    • Dump ID Teman
 
-• Dump ID Follower
+    • Dump ID Publik
 
-• Dump ID Likes
+    • Dump ID Follower
 
-• Dump ID From Pesan
+    • Dump ID Likes
 
-• Dump ID From Grup
+    • Dump ID From Pesan
 
-• Dump ID From Query
+    • Dump ID From Grup
 
-• Start Crack
+    • Dump ID From Query
 
-• Cek Opsi Chekpoint
+    • Start Crack
 
-• Lihat Hasil Crack
+    • Cek Opsi Chekpoint
 
-#(Metode_Crack)#
+    • Lihat Hasil Crack
 
-• Metode b-api.facebook.com
+Metode Crack :
 
-• Metode mbasic.facebook.com
+    • Metode mbasic.facebook.com
 
-• Metode mobile.facebook.com
+Perintah :
 
-• metode free.facebook.com
+    $ pkg update && upgrade
 
-#(Perintah)#
+    $ pkg install git
 
-$ pkg update && upgrade
+    $ pkg install python2
 
-$ pkg install git
+    $ pip2 install bs4
 
-$ pkg install python2
+    $ pip2 install requests
 
-$ pip2 install bs4
+    $ pip2 install mechanize
 
-$ pip2 install requests
+    $ git clone https://github.com/RozhakXD/Premium
 
-$ pip2 install mechanize
+    $ cd Premium
 
-$ git clone https://github.com/RozhakXD/Premium
+    $ python2 Prem.py
 
-$ cd Premium
+Telegram & WhatsApp :
 
-$ python2 Prem.py
+    • https://t.me/rozhakxd
 
-#(Telegram)#
-
-https://t.me/rozhakxd
+    • https://wa.me/6285727173376
