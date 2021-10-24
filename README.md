@@ -3,7 +3,9 @@
 Script Crack Facebook & Instagram Pastinya Free 😎
 
 #(Menu_Login)#
+
     • Login Menggunakan Cookie
+
     • Cara Mendapatkan Cookie
 
 #(Menu)#
