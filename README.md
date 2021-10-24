@@ -12,15 +12,19 @@ Menu Crack :
 
 • Crack Instagram
 
-    • Crack From 
+    • Crack Dari Username Huruf+Angka
 
-    • Crack From 
+    • Crack Dari Username Huruf_Angka 
 
-    • Crack From 
+    • Crack Dari Email Nama+Angka 
 
-    • Crack From 
+    • Crack Dari Email Huruf 
 
-    • Crack From 
+    • Crack Dari Email Angka
+
+    • Crack Dari Query V1
+
+    • Crack Dari Query V2
 
 • Crack Facebook
 
