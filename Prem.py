@@ -10,6 +10,7 @@ sys.setdefaultencoding('utf8')
 """   Terimaksih Untuk Semuanya   """
 #####################################
 
+
 """
 
 Pastikan Jangan Ubah Bot Follownya !
@@ -17,6 +18,7 @@ Kalo Mau Tinggal Tambahin Faham?
 Dan Jika Ingin Di Ganti Izin Dulu :v
 
  				  """
+				  
 				  
 #####################################
 logo = ("""\x1b[1;92m ___ ___ ___ __  __ ___ _   _ __  __
