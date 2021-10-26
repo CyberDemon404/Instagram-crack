@@ -5,6 +5,7 @@ from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from bs4 import BeautifulSoup as parser
 from urllib2 import urlopen
+from cek_opsi import cek_opsi
 reload(sys)
 sys.setdefaultencoding("utf-8")
 """   Terimaksih Untuk Semuanya   """
