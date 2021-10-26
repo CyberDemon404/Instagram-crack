@@ -689,7 +689,7 @@ def daftar_menu():
 	elif pilih == "1":
 		menu_instagram()
 	elif pilih == "2":
-		fst_slw = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Dump fast\x1b[1;93m/\x1b[1;97mslow :\x1b[1;96m ")
+		fst_slw = raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Dump fast/slow (f/s) :\x1b[1;96m ")
 		if fst_slw == "":
 			exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
 		elif fst_slw == "f" or fst_slw == "F":
