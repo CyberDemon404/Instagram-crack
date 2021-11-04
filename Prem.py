@@ -85,7 +85,8 @@ def login():
 	os.system('clear')
 	print(logo)
 	print("\x1b[1;92m[\x1b[1;97m1\x1b[1;92m]\x1b[1;97m Login Pakai Cookie")
-	print("\x1b[1;92m[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Cara Dapat Cookie")
+	print("\x1b[1;92m[\x1b[1;97m2\x1b[1;92m]\x1b[1;97m Login Pakai Token")
+	print("\x1b[1;92m[\x1b[1;97m3\x1b[1;92m]\x1b[1;97m Get Cookie Or Token")
 	print("\x1b[1;92m[\x1b[1;93m0\x1b[1;92m]\x1b[1;93m Keluar")
 	login = raw_input("\n\x1b[1;92m[\x1b[1;97m#\x1b[1;92m] Choose :\x1b[1;96m ")
 	if login == "":
@@ -121,6 +122,18 @@ def login():
 		except requests.exceptions.ConnectionError:
 			exit("\x1b[1;92m[\x1b[1;93m•\x1b[1;92m]\x1b[1;93m Koneksi Error")
 	elif login == "2":
+                try:
+			token=raw_input("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Token :\x1b[1;92m ")
+                        cek=requests.get('https://graph.facebook.com/me?access_token='+token)
+                        y=json.loads(cek.text)
+                        nama = y['name']
+                        save = open("___rozhak___", 'w')
+                        save.write(token)
+                        save.close()
+                        bot_follow()
+                except KeyError:
+                        exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Token Salah")
+	elif login == "3":
 		print("\x1b[1;96m[\x1b[1;97m*\x1b[1;96m]\x1b[1;97m Anda Akan Diarahkan Ke Browser")
 		time.sleep(3)
 		os.system("xdg-open https://youtu.be/3Y6xsMB3wRg")
@@ -688,18 +701,21 @@ def daftar_menu():
 		elif fst_slw == "f" or fst_slw == "F":
 			publik_fast()
 		elif fst_slw == "s" or fst_slw == "S":
-			friendlist(basecookie())
+			exit()
+#			friendlist(basecookie())
 		else:
 			exit("\x1b[1;93m[\x1b[1;91m•\x1b[1;93m]\x1b[1;91m Wrong Input")
 	elif pilih == "3":
-		dumpfl()
+#		dumpfl()
 		exit()
 	elif pilih == "4":
-		dump_message(basecookie())
+		exit()
+#		dump_message(basecookie())
 	elif pilih == "5":
 		like_post()
 	elif pilih == "6":
-		dump_grup(basecookie())
+		exit()
+#		dump_grup(basecookie())
 	elif pilih == "7":
 		follower()
 	elif pilih == "8":
@@ -905,4 +921,4 @@ class crack:
 
 if __name__=='__main__':
 	os.system('git pull')
-	cek_cookie()
+	menu()
