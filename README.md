@@ -25,6 +25,8 @@ Menu Crack :
     • Crack Dari Query V1
 
     • Crack Dari Query V2
+    
+    • Lihat hasil crack
 
 • Crack Facebook
 
@@ -36,12 +38,6 @@ Menu Crack :
 
     • Dump ID Likes
 
-    • Dump ID From Pesan
-
-    • Dump ID From Grup
-
-    • Dump ID From Query
-
     • Start Crack
 
     • Cek Opsi Chekpoint
@@ -51,6 +47,10 @@ Menu Crack :
 Metode Crack :
 
     • Metode mbasic.facebook.com
+
+    • Metode free.facebook.com
+
+    • Metode mobile.facebook.com
 
 Perintah :
 
@@ -63,6 +63,8 @@ Perintah :
     $ pip2 install bs4
 
     $ pip2 install requests
+
+    $ pip2 install futures
 
     $ git clone https://github.com/RozhakXD/Premium
 
