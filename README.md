@@ -17,3 +17,8 @@ Link : https://youtu.be/u17ZQgSs3aY
     • git clone https://github.com/RozhakXD/Premium
     • cd Premium
     • python2 Prem.py
+# Sosial Media
+    • Fb : https://free.facebook.com/rozhak.xyz
+    • Ig : https://www.instagram.com/rozhak_official
+    • Yt : https://www.youtube.com/rozhakid
+    • Wa : https://wa.me/6283847921480
