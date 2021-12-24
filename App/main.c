@@ -1627,6 +1627,7 @@ static const char __pyx_k_enc_pass[] = "enc_pass";
 static const char __pyx_k_get_dict[] = "get_dict";
 static const char __pyx_k_git_pull[] = "git pull";
 static const char __pyx_k_header_2[] = "header";
+static const char __pyx_k_kuki_txt[] = "kuki.txt";
 static const char __pyx_k_mail_com[] = "@mail.com";
 static const char __pyx_k_password[] = "___password___";
 static const char __pyx_k_pengikut[] = "___pengikut___";
@@ -1668,7 +1669,6 @@ static const char __pyx_k_sessionid_2[] = "sessionid";
 static const char __pyx_k_x_csrftoken[] = "x-csrftoken";
 static const char __pyx_k_x_ig_app_id[] = "x-ig-app-id";
 static const char __pyx_k_95bfef5dd816[] = "95bfef5dd816";
-static const char __pyx_k_App_kuki_txt[] = "App/kuki.txt";
 static const char __pyx_k_App_user_txt[] = "App/user.txt";
 static const char __pyx_k_comment_text[] = "comment_text";
 static const char __pyx_k_content_type[] = "content-type";
@@ -1689,6 +1689,7 @@ static const char __pyx_k_content_length[] = "content-length";
 static const char __pyx_k_en_US_en_q_0_8[] = "en-US,en;q=0.8";
 static const char __pyx_k_en_US_en_q_0_9[] = "en-US,en;q=0.9";
 static const char __pyx_k_follower_count[] = "follower_count";
+static const char __pyx_k_rm_rf_kuki_txt[] = "rm -rf kuki.txt";
 static const char __pyx_k_s_sSelesai_s_s[] = "\r%s[%sSelesai%s]%s                        ";
 static const char __pyx_k_s_s_s_s_File_s[] = "%s[%s?%s]%s File :%s ";
 static const char __pyx_k_s_s_s_s_Nama_s[] = "\n%s[%s?%s]%s Nama :%s ";
@@ -1731,7 +1732,6 @@ static const char __pyx_k_cat_Results_Cp_txt[] = "cat Results/Cp.txt";
 static const char __pyx_k_cat_Results_Ok_txt[] = "cat Results/Ok.txt";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_concurrent_futures[] = "concurrent.futures";
-static const char __pyx_k_rm_rf_App_kuki_txt[] = "rm -rf App/kuki.txt";
 static const char __pyx_k_s_s_s_s_Choose_s_2[] = "\n%s[%s?%s]%s Choose :%s ";
 static const char __pyx_k_s_s_s_s_Dump_Gagal[] = "%s[%s!%s]%s Dump Gagal";
 static const char __pyx_k_s_s_s_s_Ketik_main[] = "%s[%s?%s]%s Ketik {./main}";
@@ -1766,6 +1766,7 @@ static const char __pyx_k_s_sA_s_s_Cara_Menggunakan[] = "%s[%sA%s]%s Cara Menggu
 static const char __pyx_k_s_s_s_s_User_Berupa_Angka[] = "%s[%s!%s]%s User Berupa Angka";
 static const char __pyx_k_s_s9_s_s_Lihat_Hasil_Crack[] = "%s[%s9%s]%s Lihat Hasil Crack";
 static const char __pyx_k_s_s_s_s_Total_Pengikut_s_s[] = "%s[%s?%s]%s Total Pengikut :%s %s";
+static const char __pyx_k_rm_rf_kuki_txt_App_user_txt[] = "rm -rf kuki.txt && App/user.txt";
 static const char __pyx_k_s_s_s_s_Status_s_Checkpoint[] = "\r%s[%s\342\234\230%s]%s Status :%s Checkpoint               ";
 static const char __pyx_k_s_s_s_s_Total_Mengikuti_s_s[] = "%s[%s?%s]%s Total Mengikuti :%s %s";
 static const char __pyx_k_s_s_s_s_User_Tidak_Ditemukan[] = "%s[%s!%s]%s User Tidak Ditemukan";
@@ -1779,7 +1780,6 @@ static const char __pyx_k_s_s_s_s_Gunakan_Untuk_Password[] = "%s[%s!%s]%s Gunaka
 static const char __pyx_k_1_97m_1_93m_1_97m_1_93m_Gunakan[] = "\n\033[1;97m[\033[1;93m!\033[1;97m]\033[1;93m Gunakan Script Ini Sewajarnya Saja Author Tidak Bertanggung Jawab Jika Anda Menyalahgunakan Script Ini!\n\n\033[1;97m[\033[1;92m?\033[1;97m]\033[1;92m Dengan Menekan Enter Berarti Anda Menyetujui Syarat & Ketentuan Yang Ada!\033[1;97m ";
 static const char __pyx_k_rank_token_0_3953592318270893_c[] = "&rank_token=0.3953592318270893&count=";
 static const char __pyx_k_rank_token_caf8d67a_5140_4fcd_a[] = "/?rank_token=caf8d67a-5140-4fcd-a795-e2a9047dc5d9";
-static const char __pyx_k_rm_rf_App_kuki_txt_App_user_txt[] = "rm -rf App/kuki.txt && App/user.txt";
 static const char __pyx_k_s_s1_s_s_Dump_Username_Dari_Men[] = "%s[%s1%s]%s Dump Username Dari Mengikuti";
 static const char __pyx_k_s_s1_s_s_Gunakan_Password_s_sNa[] = "\n%s[%s1%s]%s Gunakan Password %s{%sName123,Name12345%s}";
 static const char __pyx_k_s_s1_s_s_Lihat_Hasil_Results_Ok[] = "\n%s[%s1%s]%s Lihat Hasil Results/Ok.txt";
@@ -1861,7 +1861,6 @@ static PyObject *__pyx_kp_s_95bfef5dd816;
 static PyObject *__pyx_n_s_A;
 static PyObject *__pyx_kp_s_Accept_Encoding;
 static PyObject *__pyx_kp_s_Accept_Language;
-static PyObject *__pyx_kp_s_App_kuki_txt;
 static PyObject *__pyx_kp_s_App_proxy_txt;
 static PyObject *__pyx_kp_s_App_ua_txt;
 static PyObject *__pyx_kp_s_App_user_txt;
@@ -2017,6 +2016,7 @@ static PyObject *__pyx_n_s_input;
 static PyObject *__pyx_n_s_json;
 static PyObject *__pyx_kp_s_keep_alive;
 static PyObject *__pyx_n_s_kuki;
+static PyObject *__pyx_kp_s_kuki_txt;
 static PyObject *__pyx_n_s_limit;
 static PyObject *__pyx_n_s_list;
 static PyObject *__pyx_n_s_loads;
@@ -2076,8 +2076,8 @@ static PyObject *__pyx_n_s_res_2;
 static PyObject *__pyx_n_s_rex;
 static PyObject *__pyx_n_s_rex2;
 static PyObject *__pyx_n_s_rex3;
-static PyObject *__pyx_kp_s_rm_rf_App_kuki_txt;
-static PyObject *__pyx_kp_s_rm_rf_App_kuki_txt_App_user_txt;
+static PyObject *__pyx_kp_s_rm_rf_kuki_txt;
+static PyObject *__pyx_kp_s_rm_rf_kuki_txt_App_user_txt;
 static PyObject *__pyx_kp_s_s;
 static PyObject *__pyx_kp_s_s_2;
 static PyObject *__pyx_kp_s_s_Nama_s;
@@ -2632,7 +2632,7 @@ static PyObject *__pyx_pf_4main____login___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         ___vps = ___cookie___.split('ds_user_id=')[1];___user___ = ___vps.split(';')[0]
  *         open('App/user.txt','w').write(___user___)             # <<<<<<<<<<<<<<
  *         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
- *         open('App/kuki.txt','w').write(___cookie___)
+ *         open('kuki.txt','w').write(___cookie___)
  */
       __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 54, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -2660,7 +2660,7 @@ static PyObject *__pyx_pf_4main____login___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         ___vps = ___cookie___.split('ds_user_id=')[1];___user___ = ___vps.split(';')[0]
  *         open('App/user.txt','w').write(___user___)
  *         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']             # <<<<<<<<<<<<<<
- *         open('App/kuki.txt','w').write(___cookie___)
+ *         open('kuki.txt','w').write(___cookie___)
  *         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))
  */
       __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_requests); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 55, __pyx_L3_error)
@@ -2713,7 +2713,7 @@ static PyObject *__pyx_pf_4main____login___(CYTHON_UNUSED PyObject *__pyx_self) 
       /* "main.py":56
  *         open('App/user.txt','w').write(___user___)
  *         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
- *         open('App/kuki.txt','w').write(___cookie___)             # <<<<<<<<<<<<<<
+ *         open('kuki.txt','w').write(___cookie___)             # <<<<<<<<<<<<<<
  *         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))
  *         ___cookies___()
  */
@@ -2741,7 +2741,7 @@ static PyObject *__pyx_pf_4main____login___(CYTHON_UNUSED PyObject *__pyx_self) 
 
       /* "main.py":57
  *         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
- *         open('App/kuki.txt','w').write(___cookie___)
+ *         open('kuki.txt','w').write(___cookie___)
  *         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))             # <<<<<<<<<<<<<<
  *         ___cookies___()
  *     except (KeyError):
@@ -2785,7 +2785,7 @@ static PyObject *__pyx_pf_4main____login___(CYTHON_UNUSED PyObject *__pyx_self) 
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
       /* "main.py":58
- *         open('App/kuki.txt','w').write(___cookie___)
+ *         open('kuki.txt','w').write(___cookie___)
  *         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))
  *         ___cookies___()             # <<<<<<<<<<<<<<
  *     except (KeyError):
@@ -3011,7 +3011,7 @@ static PyObject *__pyx_pf_4main____login___(CYTHON_UNUSED PyObject *__pyx_self) 
  * # Headers
  * def ___header___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  */
 
 /* Python wrapper */
@@ -3053,7 +3053,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
  * # Headers
  * def ___header___():
  *     try:             # <<<<<<<<<<<<<<
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *     except (IOError):
  */
   {
@@ -3068,7 +3068,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
       /* "main.py":66
  * def ___header___():
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}             # <<<<<<<<<<<<<<
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}             # <<<<<<<<<<<<<<
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2);___login___()
  */
@@ -3104,7 +3104,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
  * # Headers
  * def ___header___():
  *     try:             # <<<<<<<<<<<<<<
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *     except (IOError):
  */
     }
@@ -3120,7 +3120,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
 
     /* "main.py":67
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *     except (IOError):             # <<<<<<<<<<<<<<
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2);___login___()
  *     return ___head
@@ -3134,7 +3134,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
       __Pyx_GOTREF(__pyx_t_7);
 
       /* "main.py":68
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2);___login___()             # <<<<<<<<<<<<<<
  *     return ___head
@@ -3215,7 +3215,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
  * # Headers
  * def ___header___():
  *     try:             # <<<<<<<<<<<<<<
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *     except (IOError):
  */
     __Pyx_XGIVEREF(__pyx_t_1);
@@ -3249,7 +3249,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
  * # Headers
  * def ___header___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  */
 
   /* function exit code */
@@ -3276,7 +3276,7 @@ static PyObject *__pyx_pf_4main_2___header___(CYTHON_UNUSED PyObject *__pyx_self
  * # Cek Cookie
  * def ___cookies___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  */
 
 /* Python wrapper */
@@ -3328,7 +3328,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
  * # Cek Cookie
  * def ___cookies___():
  *     try:             # <<<<<<<<<<<<<<
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  */
   {
@@ -3343,7 +3343,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
       /* "main.py":73
  * def ___cookies___():
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()             # <<<<<<<<<<<<<<
+ *         ___cookie___ = open('kuki.txt','r').read()             # <<<<<<<<<<<<<<
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)
  */
@@ -3374,7 +3374,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
  * # Cek Cookie
  * def ___cookies___():
  *     try:             # <<<<<<<<<<<<<<
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  */
     }
@@ -3389,7 +3389,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
 
     /* "main.py":74
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):             # <<<<<<<<<<<<<<
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)
  *         ___login___()
@@ -3403,7 +3403,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
       __Pyx_GOTREF(__pyx_t_5);
 
       /* "main.py":75
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)             # <<<<<<<<<<<<<<
  *         ___login___()
@@ -3492,7 +3492,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
  * # Cek Cookie
  * def ___cookies___():
  *     try:             # <<<<<<<<<<<<<<
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  */
     __Pyx_XGIVEREF(__pyx_t_1);
@@ -3857,7 +3857,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
  *             ___menu___()
  *         else:
  *             print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)             # <<<<<<<<<<<<<<
- *             os.system('rm -rf App/kuki.txt');___login___()
+ *             os.system('rm -rf kuki.txt');___login___()
  *     except (KeyError):
  */
       /*else*/ {
@@ -3910,9 +3910,9 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
         /* "main.py":90
  *         else:
  *             print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)
- *             os.system('rm -rf App/kuki.txt');___login___()             # <<<<<<<<<<<<<<
+ *             os.system('rm -rf kuki.txt');___login___()             # <<<<<<<<<<<<<<
  *     except (KeyError):
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
  */
         __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_os); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 90, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_5);
@@ -3929,7 +3929,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
             __Pyx_DECREF_SET(__pyx_t_4, function);
           }
         }
-        __pyx_t_6 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_kp_s_rm_rf_App_kuki_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_s_rm_rf_App_kuki_txt);
+        __pyx_t_6 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_kp_s_rm_rf_kuki_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_s_rm_rf_kuki_txt);
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 90, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_6);
@@ -3980,9 +3980,9 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
 
     /* "main.py":91
  *             print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)
- *             os.system('rm -rf App/kuki.txt');___login___()
+ *             os.system('rm -rf kuki.txt');___login___()
  *     except (KeyError):             # <<<<<<<<<<<<<<
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
  * # Daftar Menu
  */
     __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
@@ -3994,9 +3994,9 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
       __Pyx_GOTREF(__pyx_t_5);
 
       /* "main.py":92
- *             os.system('rm -rf App/kuki.txt');___login___()
+ *             os.system('rm -rf kuki.txt');___login___()
  *     except (KeyError):
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))             # <<<<<<<<<<<<<<
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))             # <<<<<<<<<<<<<<
  * # Daftar Menu
  * def ___menu___():
  */
@@ -4015,7 +4015,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
           __Pyx_DECREF_SET(__pyx_t_10, function);
         }
       }
-      __pyx_t_12 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_11, __pyx_kp_s_rm_rf_App_kuki_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_kp_s_rm_rf_App_kuki_txt);
+      __pyx_t_12 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_11, __pyx_kp_s_rm_rf_kuki_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_kp_s_rm_rf_kuki_txt);
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 92, __pyx_L13_except_error)
       __Pyx_GOTREF(__pyx_t_12);
@@ -4083,7 +4083,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
  * # Cek Cookie
  * def ___cookies___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  */
 
   /* function exit code */
@@ -4116,7 +4116,7 @@ static PyObject *__pyx_pf_4main_4___cookies___(CYTHON_UNUSED PyObject *__pyx_sel
 }
 
 /* "main.py":94
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
  * # Daftar Menu
  * def ___menu___():             # <<<<<<<<<<<<<<
  *     os.system('clear')
@@ -4198,7 +4198,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *     os.system('clear')
  *     print(___logo___)             # <<<<<<<<<<<<<<
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_logo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -4209,7 +4209,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *     os.system('clear')
  *     print(___logo___)
  *     try:             # <<<<<<<<<<<<<<
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  */
   {
@@ -4224,7 +4224,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
       /* "main.py":98
  *     print(___logo___)
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()             # <<<<<<<<<<<<<<
+ *         ___cookie___ = open('kuki.txt','r').read()             # <<<<<<<<<<<<<<
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)
  */
@@ -4255,7 +4255,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *     os.system('clear')
  *     print(___logo___)
  *     try:             # <<<<<<<<<<<<<<
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  */
     }
@@ -4270,7 +4270,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
 
     /* "main.py":99
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):             # <<<<<<<<<<<<<<
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)
  *         ___login___()
@@ -4284,7 +4284,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
       __Pyx_GOTREF(__pyx_t_3);
 
       /* "main.py":100
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2)             # <<<<<<<<<<<<<<
  *         ___login___()
@@ -4373,7 +4373,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *     os.system('clear')
  *     print(___logo___)
  *     try:             # <<<<<<<<<<<<<<
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  *     except (IOError):
  */
     __Pyx_XGIVEREF(__pyx_t_4);
@@ -4675,7 +4675,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         print("%s[%s%s]%s Follower :%s %s\n"%(H,P,H,P,K,__inf['follower_count']))
  *     except (KeyError):             # <<<<<<<<<<<<<<
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
- *         os.system('rm -rf App/kuki.txt');sleep(2)
+ *         os.system('rm -rf kuki.txt');sleep(2)
  */
     __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_7) {
@@ -4689,7 +4689,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         print("%s[%s%s]%s Follower :%s %s\n"%(H,P,H,P,K,__inf['follower_count']))
  *     except (KeyError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))             # <<<<<<<<<<<<<<
- *         os.system('rm -rf App/kuki.txt');sleep(2)
+ *         os.system('rm -rf kuki.txt');sleep(2)
  *         ___login___()
  */
       __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_P); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 109, __pyx_L13_except_error)
@@ -4723,7 +4723,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
       /* "main.py":110
  *     except (KeyError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
- *         os.system('rm -rf App/kuki.txt');sleep(2)             # <<<<<<<<<<<<<<
+ *         os.system('rm -rf kuki.txt');sleep(2)             # <<<<<<<<<<<<<<
  *         ___login___()
  *     except (ConnectionError):
  */
@@ -4742,7 +4742,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
           __Pyx_DECREF_SET(__pyx_t_8, function);
         }
       }
-      __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_2, __pyx_kp_s_rm_rf_App_kuki_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_kp_s_rm_rf_App_kuki_txt);
+      __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_2, __pyx_kp_s_rm_rf_kuki_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_kp_s_rm_rf_kuki_txt);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L13_except_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -4769,7 +4769,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
 
       /* "main.py":111
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
- *         os.system('rm -rf App/kuki.txt');sleep(2)
+ *         os.system('rm -rf kuki.txt');sleep(2)
  *         ___login___()             # <<<<<<<<<<<<<<
  *     except (ConnectionError):
  *         exit("%s[%s!%s]%s Koneksi Error"%(P,K,P,K))
@@ -4799,7 +4799,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
     }
 
     /* "main.py":112
- *         os.system('rm -rf App/kuki.txt');sleep(2)
+ *         os.system('rm -rf kuki.txt');sleep(2)
  *         ___login___()
  *     except (ConnectionError):             # <<<<<<<<<<<<<<
  *         exit("%s[%s!%s]%s Koneksi Error"%(P,K,P,K))
@@ -6306,7 +6306,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         os.system("xdg-open https://youtu.be/u17ZQgSs3aY");exit()
  *         exit("%s[%s?%s]%s Ketik {./main}"%(P,H,P,H))             # <<<<<<<<<<<<<<
  *     elif ___menu___ in ['0','00']:
- *         os.system('rm -rf App/kuki.txt && App/user.txt')
+ *         os.system('rm -rf kuki.txt && App/user.txt')
  */
     __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_P); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
@@ -6352,7 +6352,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         os.system("xdg-open https://youtu.be/u17ZQgSs3aY");exit()
  *         exit("%s[%s?%s]%s Ketik {./main}"%(P,H,P,H))
  *     elif ___menu___ in ['0','00']:             # <<<<<<<<<<<<<<
- *         os.system('rm -rf App/kuki.txt && App/user.txt')
+ *         os.system('rm -rf kuki.txt && App/user.txt')
  *         exit("%s[%s!%s]%s Menghapus Cookie..."%(P,K,P,K))
  */
   __Pyx_INCREF(__pyx_v____menu___);
@@ -6373,7 +6373,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
     /* "main.py":162
  *         exit("%s[%s?%s]%s Ketik {./main}"%(P,H,P,H))
  *     elif ___menu___ in ['0','00']:
- *         os.system('rm -rf App/kuki.txt && App/user.txt')             # <<<<<<<<<<<<<<
+ *         os.system('rm -rf kuki.txt && App/user.txt')             # <<<<<<<<<<<<<<
  *         exit("%s[%s!%s]%s Menghapus Cookie..."%(P,K,P,K))
  *     else:
  */
@@ -6392,7 +6392,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
         __Pyx_DECREF_SET(__pyx_t_8, function);
       }
     }
-    __pyx_t_11 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_1, __pyx_kp_s_rm_rf_App_kuki_txt_App_user_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_kp_s_rm_rf_App_kuki_txt_App_user_txt);
+    __pyx_t_11 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_8, __pyx_t_1, __pyx_kp_s_rm_rf_kuki_txt_App_user_txt) : __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_kp_s_rm_rf_kuki_txt_App_user_txt);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
@@ -6401,7 +6401,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
 
     /* "main.py":163
  *     elif ___menu___ in ['0','00']:
- *         os.system('rm -rf App/kuki.txt && App/user.txt')
+ *         os.system('rm -rf kuki.txt && App/user.txt')
  *         exit("%s[%s!%s]%s Menghapus Cookie..."%(P,K,P,K))             # <<<<<<<<<<<<<<
  *     else:
  *         exit("%s[%s!%s]%s Wrong Input"%(P,M,P,M))
@@ -6440,7 +6440,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
  *         os.system("xdg-open https://youtu.be/u17ZQgSs3aY");exit()
  *         exit("%s[%s?%s]%s Ketik {./main}"%(P,H,P,H))
  *     elif ___menu___ in ['0','00']:             # <<<<<<<<<<<<<<
- *         os.system('rm -rf App/kuki.txt && App/user.txt')
+ *         os.system('rm -rf kuki.txt && App/user.txt')
  *         exit("%s[%s!%s]%s Menghapus Cookie..."%(P,K,P,K))
  */
     goto __pyx_L21;
@@ -6487,7 +6487,7 @@ static PyObject *__pyx_pf_4main_6___menu___(CYTHON_UNUSED PyObject *__pyx_self) 
   __pyx_L21:;
 
   /* "main.py":94
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
  * # Daftar Menu
  * def ___menu___():             # <<<<<<<<<<<<<<
  *     os.system('clear')
@@ -15772,7 +15772,7 @@ static PyObject *__pyx_pf_4main_24___crack___(CYTHON_UNUSED PyObject *__pyx_self
  *         for pw in pwx:
  *             pw = pw.lower()             # <<<<<<<<<<<<<<
  *             proxy = random.choice(open("App/proxy.txt","r").read().splitlines())
- *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  */
         __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_pw, __pyx_n_s_lower); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 407, __pyx_L11_error)
         __Pyx_GOTREF(__pyx_t_8);
@@ -15798,7 +15798,7 @@ static PyObject *__pyx_pf_4main_24___crack___(CYTHON_UNUSED PyObject *__pyx_self
  *         for pw in pwx:
  *             pw = pw.lower()
  *             proxy = random.choice(open("App/proxy.txt","r").read().splitlines())             # <<<<<<<<<<<<<<
- *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *             header = {
  */
         __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_random); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 408, __pyx_L11_error)
@@ -15866,7 +15866,7 @@ static PyObject *__pyx_pf_4main_24___crack___(CYTHON_UNUSED PyObject *__pyx_self
         /* "main.py":409
  *             pw = pw.lower()
  *             proxy = random.choice(open("App/proxy.txt","r").read().splitlines())
- *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}             # <<<<<<<<<<<<<<
+ *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}             # <<<<<<<<<<<<<<
  *             header = {
  *                 'Accept-Encoding': 'gzip, deflate',
  */
@@ -15899,7 +15899,7 @@ static PyObject *__pyx_pf_4main_24___crack___(CYTHON_UNUSED PyObject *__pyx_self
         __pyx_t_6 = 0;
 
         /* "main.py":411
- *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *             header = {
  *                 'Accept-Encoding': 'gzip, deflate',             # <<<<<<<<<<<<<<
  *                 'Accept-Language': 'en-US,en;q=0.8',
@@ -17665,7 +17665,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_A, __pyx_k_A, sizeof(__pyx_k_A), 0, 0, 1, 1},
   {&__pyx_kp_s_Accept_Encoding, __pyx_k_Accept_Encoding, sizeof(__pyx_k_Accept_Encoding), 0, 0, 1, 0},
   {&__pyx_kp_s_Accept_Language, __pyx_k_Accept_Language, sizeof(__pyx_k_Accept_Language), 0, 0, 1, 0},
-  {&__pyx_kp_s_App_kuki_txt, __pyx_k_App_kuki_txt, sizeof(__pyx_k_App_kuki_txt), 0, 0, 1, 0},
   {&__pyx_kp_s_App_proxy_txt, __pyx_k_App_proxy_txt, sizeof(__pyx_k_App_proxy_txt), 0, 0, 1, 0},
   {&__pyx_kp_s_App_ua_txt, __pyx_k_App_ua_txt, sizeof(__pyx_k_App_ua_txt), 0, 0, 1, 0},
   {&__pyx_kp_s_App_user_txt, __pyx_k_App_user_txt, sizeof(__pyx_k_App_user_txt), 0, 0, 1, 0},
@@ -17821,6 +17820,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_json, __pyx_k_json, sizeof(__pyx_k_json), 0, 0, 1, 1},
   {&__pyx_kp_s_keep_alive, __pyx_k_keep_alive, sizeof(__pyx_k_keep_alive), 0, 0, 1, 0},
   {&__pyx_n_s_kuki, __pyx_k_kuki, sizeof(__pyx_k_kuki), 0, 0, 1, 1},
+  {&__pyx_kp_s_kuki_txt, __pyx_k_kuki_txt, sizeof(__pyx_k_kuki_txt), 0, 0, 1, 0},
   {&__pyx_n_s_limit, __pyx_k_limit, sizeof(__pyx_k_limit), 0, 0, 1, 1},
   {&__pyx_n_s_list, __pyx_k_list, sizeof(__pyx_k_list), 0, 0, 1, 1},
   {&__pyx_n_s_loads, __pyx_k_loads, sizeof(__pyx_k_loads), 0, 0, 1, 1},
@@ -17880,8 +17880,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_rex, __pyx_k_rex, sizeof(__pyx_k_rex), 0, 0, 1, 1},
   {&__pyx_n_s_rex2, __pyx_k_rex2, sizeof(__pyx_k_rex2), 0, 0, 1, 1},
   {&__pyx_n_s_rex3, __pyx_k_rex3, sizeof(__pyx_k_rex3), 0, 0, 1, 1},
-  {&__pyx_kp_s_rm_rf_App_kuki_txt, __pyx_k_rm_rf_App_kuki_txt, sizeof(__pyx_k_rm_rf_App_kuki_txt), 0, 0, 1, 0},
-  {&__pyx_kp_s_rm_rf_App_kuki_txt_App_user_txt, __pyx_k_rm_rf_App_kuki_txt_App_user_txt, sizeof(__pyx_k_rm_rf_App_kuki_txt_App_user_txt), 0, 0, 1, 0},
+  {&__pyx_kp_s_rm_rf_kuki_txt, __pyx_k_rm_rf_kuki_txt, sizeof(__pyx_k_rm_rf_kuki_txt), 0, 0, 1, 0},
+  {&__pyx_kp_s_rm_rf_kuki_txt_App_user_txt, __pyx_k_rm_rf_kuki_txt_App_user_txt, sizeof(__pyx_k_rm_rf_kuki_txt_App_user_txt), 0, 0, 1, 0},
   {&__pyx_kp_s_s, __pyx_k_s, sizeof(__pyx_k_s), 0, 0, 1, 0},
   {&__pyx_kp_s_s_2, __pyx_k_s_2, sizeof(__pyx_k_s_2), 0, 0, 1, 0},
   {&__pyx_kp_s_s_Nama_s, __pyx_k_s_Nama_s, sizeof(__pyx_k_s_Nama_s), 0, 0, 1, 0},
@@ -18036,7 +18036,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         ___vps = ___cookie___.split('ds_user_id=')[1];___user___ = ___vps.split(';')[0]
  *         open('App/user.txt','w').write(___user___)             # <<<<<<<<<<<<<<
  *         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
- *         open('App/kuki.txt','w').write(___cookie___)
+ *         open('kuki.txt','w').write(___cookie___)
  */
   __pyx_tuple__2 = PyTuple_Pack(2, __pyx_kp_s_App_user_txt, __pyx_n_s_w); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
@@ -18045,22 +18045,22 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "main.py":56
  *         open('App/user.txt','w').write(___user___)
  *         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
- *         open('App/kuki.txt','w').write(___cookie___)             # <<<<<<<<<<<<<<
+ *         open('kuki.txt','w').write(___cookie___)             # <<<<<<<<<<<<<<
  *         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))
  *         ___cookies___()
  */
-  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_kp_s_App_kuki_txt, __pyx_n_s_w); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_kp_s_kuki_txt, __pyx_n_s_w); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
   /* "main.py":66
  * def ___header___():
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}             # <<<<<<<<<<<<<<
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}             # <<<<<<<<<<<<<<
  *     except (IOError):
  *         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M));sleep(2);___login___()
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_kp_s_App_kuki_txt, __pyx_n_s_r); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_kp_s_kuki_txt, __pyx_n_s_r); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
@@ -18211,7 +18211,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         for pw in pwx:
  *             pw = pw.lower()
  *             proxy = random.choice(open("App/proxy.txt","r").read().splitlines())             # <<<<<<<<<<<<<<
- *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  *             header = {
  */
   __pyx_tuple__27 = PyTuple_Pack(2, __pyx_kp_s_App_proxy_txt, __pyx_n_s_r); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 408, __pyx_L1_error)
@@ -18301,7 +18301,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * # Headers
  * def ___header___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  */
   __pyx_tuple__37 = PyTuple_Pack(1, __pyx_n_s_head); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
@@ -18313,7 +18313,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * # Cek Cookie
  * def ___cookies___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  */
   __pyx_tuple__39 = PyTuple_Pack(9, __pyx_n_s_cookie_2, __pyx_n_s_cok, __pyx_n_s_kuki, __pyx_n_s_teks, __pyx_n_s_head_2, __pyx_n_s_data_2, __pyx_n_s_rex, __pyx_n_s_rex2, __pyx_n_s_rex3); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
@@ -18321,7 +18321,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_main_py, __pyx_n_s_cookies, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 71, __pyx_L1_error)
 
   /* "main.py":94
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
  * # Daftar Menu
  * def ___menu___():             # <<<<<<<<<<<<<<
  *     os.system('clear')
@@ -19264,7 +19264,7 @@ if (!__Pyx_RefNanny) {
  * # Headers
  * def ___header___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('App/kuki.txt','r').read()}
+ *         ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
  */
   __pyx_t_9 = __Pyx_CyFunction_New(&__pyx_mdef_4main_3___header___, 0, __pyx_n_s_header, NULL, __pyx_n_s_main_2, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
@@ -19276,7 +19276,7 @@ if (!__Pyx_RefNanny) {
  * # Cek Cookie
  * def ___cookies___():             # <<<<<<<<<<<<<<
  *     try:
- *         ___cookie___ = open('App/kuki.txt','r').read()
+ *         ___cookie___ = open('kuki.txt','r').read()
  */
   __pyx_t_9 = __Pyx_CyFunction_New(&__pyx_mdef_4main_5___cookies___, 0, __pyx_n_s_cookies, NULL, __pyx_n_s_main_2, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
@@ -19284,7 +19284,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
   /* "main.py":94
- *         os.system('rm -rf App/kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+ *         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
  * # Daftar Menu
  * def ___menu___():             # <<<<<<<<<<<<<<
  *     os.system('clear')
