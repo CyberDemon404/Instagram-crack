@@ -384,7 +384,7 @@ def ___password___():
                 pwx = [z[0]+'123', z[0]+'12345']
             elif ___pilih___ in ['2','02']:
                 pwx = [name.replace(' ',''), z[0]+'123', z[0]+'12345']
-            elif ___pilih___ in ['2','02']:
+            elif ___pilih___ in ['3','03']:
                 pwx = [name.replace(' ',''), z[0]+'123', z[0]+'1234', z[0]+'12345', z[0]+'123456']
             elif ___pilih___ in ['4','04']:
                 pwx = pws
