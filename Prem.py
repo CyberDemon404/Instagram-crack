@@ -58,6 +58,8 @@ def ___login___():
         ___cookies___()
     except (KeyError):
         exit("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
+    except (ValueError):
+        exit("%s[%s!%s]%s Cookie Instagram Tidak Bisa Digunakan Harap Ganti Dengan Akun Lain"%(P,M,P,M))
     except (ConnectionError):
         exit("%s[%s!%s]%s Koneksi Error"%(P,K,P,K))
 # Headers
