@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os,re,sys,json,time,random,requests
 from concurrent.futures import ThreadPoolExecutor
 from requests.exceptions import ConnectionError
