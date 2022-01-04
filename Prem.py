@@ -49,7 +49,7 @@ def ___login___():
         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
         open('kuki.txt','w').write(___cookie___)
         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))
-        ___menu___()
+        ___cookies___()
     except (KeyError):
         exit("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
     except (ValueError):
@@ -479,8 +479,6 @@ def ___crack___(total,user,pwx):
             "\r%s[%s!%s]%s Koneksi Error                "%(P,K,P,K)),
         sys.stdout.flush();sleep(5)
         ___crack___(total,user,pwx)
-#    except:
-#        pass
 
 if __name__=='__main__':
     os.system('git pull')
