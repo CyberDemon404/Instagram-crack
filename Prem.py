@@ -37,7 +37,7 @@ ses = Session()
 def ___login___():
     os.system('clear')
     print(___logo___)
-    print("\n%s[%s!%s]%s Anda Harus Memasukan Cookie Instagram, Sebaiknya Gunakan Akun Tumbal Untuk Login, Jika Anda Belum Tau Cara Mendapatkan Cookie Ketik {Open}\n"%(M,H,M,H))
+    print("\n%s[%s!%s]%s Anda Harus Memasukan Cookie Instagram, Sebaiknya Gunakan Akun Tumbal Untuk Login, Jika Anda Belum Tau Cara Mendapatkan Cookie Ketik {Open}\n"%(M,B,M,B))
     try:
         ___cookie___ = input("%s[%s?%s]%s Cookie :%s "%(B,P,B,P,K))
         if ___cookie___ in ['open','Open']:
