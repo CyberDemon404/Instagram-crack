@@ -6,7 +6,7 @@ Script Crack Instagram !
 Link : https://youtu.be/u17ZQgSs3aY
 
 # Screenshot
-![Screenshot_2021-12-24-08-46-44-83_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/65714340/147317458-cb647309-e2dd-4f76-a822-181a3cccc823.png)
+![Screenshot_2022-01-03-17-36-59-71_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/65714340/148020789-d7f822af-0a1f-4433-b2c5-4a9fd09ff0a3.png)
 
 # Perintah
     • pkg update && upgrade
