@@ -11,7 +11,7 @@ Link : https://youtu.be/u17ZQgSs3aY
 # Perintah
     $ pkg update && upgrade
     $ pkg install git
-    $ pkg install python2
+    $ pkg install python
     $ pip install requests
     $ pip install futures
     $ git clone https://github.com/RozhakXD/Premium
