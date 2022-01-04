@@ -12,11 +12,11 @@ Link : https://youtu.be/u17ZQgSs3aY
     • pkg update && upgrade
     • pkg install git
     • pkg install python2
-    • pip2 install requests
-    • pip2 install futures
+    • pip install requests
+    • pip install futures
     • git clone https://github.com/RozhakXD/Premium
     • cd Premium
-    • python2 Prem.py
+    • python Prem.py
 # Sosial Media
     • Fb : https://free.facebook.com/rozhak.xyz
     • Ig : https://www.instagram.com/rozhak_official
