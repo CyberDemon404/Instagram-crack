@@ -13,7 +13,6 @@ U = ('\x1b[1;95m')
 B = ('\x1b[1;96m')
 P = ('\x1b[1;97m')
 
-
 # Logo
 ___logo___ = (f"""{H} ___ ___ ___ __  __ ___ _   _ __  __
 {H}| _ \ _ \ __|  \/  |_ _| | | |  \/  |
@@ -413,4 +412,5 @@ class ___crack___:
         except:__main__(self, user, uid, pwx)
 
 if __name__=='__main__':
+    os.system('git pull')
     ___menu___()
