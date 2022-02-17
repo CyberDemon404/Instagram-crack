@@ -1,9 +1,9 @@
 # Premium
 
-Ini Adalah Script Untuk Crack Akun Instagram, Untuk Cara Menggunakannya Bisa Lihat Di https://youtu.be/u17ZQgSs3aY
+**Ini Adalah Script Untuk Crack Akun Instagram, Untuk Cara Menggunakannya Bisa Lihat Di** https://youtu.be/u17ZQgSs3aY
 
 # Screenshot
-![Screenshot_2022-01-28-10-27-24-66_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/65714340/151503825-35b698fe-8fe9-4cf8-a722-2ea40ab314c9.png)
+![Screenshot_2022-02-14-09-45-47-07_84d3000e3f4017145260f7618db1d683](https://user-images.githubusercontent.com/65714340/154426018-589b14df-5371-47f5-a061-334315513775.png)
 
 # Perintah
     $ pkg update && upgrade
